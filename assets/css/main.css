@@ -3783,3 +3783,14 @@ input, select, textarea {
 			}
 
 		}
+.button.btn-consultation {
+    background-color: #ff5722; /* Replace with your desired hex color */
+    color: #ffffff;            /* Text color */
+    border-color: #ff5722;     /* Match border color if applicable */
+}
+
+/* Optional: Smooth transition for hover effect */
+.button.btn-consultation:hover {
+    background-color: #e64a19; /* Darker shade for hover */
+    color: #ffffff;
+}
