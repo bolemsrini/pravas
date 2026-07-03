@@ -3794,3 +3794,12 @@ input, select, textarea {
     background-color: #e64a19; /* Darker shade for hover */
     color: #ffffff;
 }
+
+
+.image.main img {
+    width: 100%;       /* Takes up 100% width of its container */
+    max-width: 800px;  /* Optional: Prevents it from getting too large on big screens */
+    height: auto;      /* Maintains the original aspect ratio automatically */
+    display: block;    /* Clears inline spacing behavior */
+    margin: 0 auto;    /* Perfectly centers the image */
+}
