@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-		<title>Book a Free Consultation - Pravas Consultants Hyderabad</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Book a free 30-minute study abroad consultation with Pravas Consultants in KPHB, Hyderabad. Get an honest profile assessment and expert university recommendations." />
-    	<meta name="keywords" content="book free consultation, study abroad counseling Hyderabad, overseas education assessment KPHB" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <title>Book a Free Consultation - Pravas Consultants Hyderabad</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Book a free 30-minute study abroad consultation with Pravas Consultants in KPHB, Hyderabad. Get an honest profile assessment and expert university recommendations." />
+    <meta name="keywords" content="book free consultation, study abroad counseling Hyderabad, overseas education assessment KPHB" />
+    <meta name="referrer" content="same-origin" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Project Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
     <!-- React Refresh Hook for Local Development HMR -->
     <script type="module">
       import { injectIntoGlobalHook } from "/@react-refresh";
@@ -19,17 +24,12 @@
     <!-- Dev Server Client -->
     <script type="module" src="/@vite/client"></script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="same-origin" />
-    <link rel="icon" href="/favicon.ico" />
-
     <!-- URL Parameter Cleanup Script -->
     <script>
       (function () {
         try {
           var url = new URL(location.href);
-          // Checks and removes a specific tracking or session token if present
+          // Safely strips the session token from the address bar after reading it
           if (url.searchParams.has('sessionToken')) {
             url.searchParams.delete('sessionToken');
             history.replaceState(null, '', url.toString());
@@ -40,25 +40,26 @@
       })();
     </script>
 
-    <title>Web Application</title>
-<nav class="app-navigation">
-  <a href="/index.html">Home</a>
-  <a href="/about-us.html">About Us</a>
-  <a href="/services.html">Services</a>
-  <!-- Link back to this page -->
-  <a href="/book-consultation.html">Book a Consultation</a>
-</nav>
     <!-- Application Specific Utilities -->
     <script src="/utils-theme-detector.js"></script>
     <script src="/utils-device-layout.js"></script>
   </head>
   <body class="app-container-view">
+
+    <!-- Global Application Navigation -->
+    <nav class="app-navigation">
+      <a href="/index.html">Home</a>
+      <a href="/about-us.html">About Us</a>
+      <a href="/services.html">Services</a>
+      <a href="/book-consultation" class="active">Book a Consultation</a>
+    </nav>
+
     <!-- Main Application Mount Point -->
     <div id="root" class="app-container-view"></div>
 
     <!-- Main Entry Module Script -->
     <script type="module" src="/src/main.js"></script>
-    
+
     <!-- Analytics / Telemetry -->
     <script src="/telemetry.js"></script>
   </body>
