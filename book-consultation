@@ -34,7 +34,13 @@
     </script>
 
     <title>Web Application</title>
-
+<nav class="app-navigation">
+  <a href="/index.html">Home</a>
+  <a href="/about-us.html">About Us</a>
+  <a href="/services.html">Services</a>
+  <!-- Link back to this page -->
+  <a href="/book-consultation.html">Book a Consultation</a>
+</nav>
     <!-- Application Specific Utilities -->
     <script src="/utils-theme-detector.js"></script>
     <script src="/utils-device-layout.js"></script>
