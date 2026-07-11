@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- React Refresh Hook for Local Development HMR -->
+    <script type="module">
+      import { injectIntoGlobalHook } from "/@react-refresh";
+      injectIntoGlobalHook(window);
+      window.$RefreshReg$ = () => {};
+      window.$RefreshSig$ = () => (type) => type;
+    </script>
+
+    <!-- Dev Server Client -->
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="same-origin" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- URL Parameter Cleanup Script -->
+    <script>
+      (function () {
+        try {
+          var url = new URL(location.href);
+          // Checks and removes a specific tracking or session token if present
+          if (url.searchParams.has('sessionToken')) {
+            url.searchParams.delete('sessionToken');
+            history.replaceState(null, '', url.toString());
+          }
+        } catch (error) {
+          console.error("URL manipulation failed:", error);
+        }
+      })();
+    </script>
+
+    <title>Web Application</title>
+
+    <!-- Application Specific Utilities -->
+    <script src="/utils-theme-detector.js"></script>
+    <script src="/utils-device-layout.js"></script>
+  </head>
+  <body class="app-container-view">
+    <!-- Main Application Mount Point -->
+    <div id="root" class="app-container-view"></div>
+
+    <!-- Main Entry Module Script -->
+    <script type="module" src="/src/main.js"></script>
+    
+    <!-- Analytics / Telemetry -->
+    <script src="/telemetry.js"></script>
+  </body>
+</html>
