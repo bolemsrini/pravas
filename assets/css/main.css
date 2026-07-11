@@ -3803,3 +3803,9 @@ input, select, textarea {
     display: block;    /* Clears inline spacing behavior */
     margin: 0 auto;    /* Perfectly centers the image */
 }
+/* Apply this class to the div you want to frame */
+.frame-this-element {
+    border: 1px solid #767676; /* Standard gray frame color */
+    border-radius: 8px;       /* Slightly rounded corners, as shown in your sample */
+    padding: 20px;            /* Adds space inside the frame so content isn't cramped */
+}
