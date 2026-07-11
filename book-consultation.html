@@ -34,22 +34,22 @@
     <script src="/utils-theme-detector.js"></script>
     <script src="/utils-device-layout.js"></script>
   </head>
-  <body class="app-container-view">
+<body class="app-container-view">
 
-    <!-- Global Application Navigation -->
+    <!-- 1. Global Application Navigation -->
     <nav class="app-navigation">
-      <a href="/index.html">Home</a>
-      <a href="/about-us.html">About Us</a>
-      <a href="/services.html">Services</a>
-      <a href="/book-consultation.html" class="active" aria-current="page">Book a Consultation</a>
+        <a href="/index.html">Home</a>
+        <a href="/about-us.html">About Us</a>
+        <a href="/services.html">Services</a>
+        <a href="/book-consultation.html" class="active" aria-current="page">Book a Consultation</a>
     </nav>
-</body>
-    <!-- Main Application Mount Point with the frame class added -->
-<div id="root" class="frame-this-element"></div>
-    <!-- Main Entry Module Script -->
-    <script type="module" src="/src/main.js"></script>
 
-    <!-- Analytics / Telemetry -->
+    <!-- 2. Main Application Mount Point (Inside the body) -->
+    <div id="root" class="app-container-view"></div>
+
+    <!-- 3. Module Scripts & Analytics (Inside the body) -->
+    <script type="module" src="/src/main.js"></script>
     <script src="/telemetry.js"></script>
-  
+
+</body> <!-- Body closes here -->
 </html>
