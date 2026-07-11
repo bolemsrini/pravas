@@ -121,3 +121,10 @@
 		});
 
 })(jQuery);
+// Inside your JavaScript/React component that renders the consultation form
+return (
+    <div className="frame-this-element">
+        <h2>Book a Free Consultation</h2>
+        {/* Your form fields, dropdowns, and buttons go here */}
+    </div>
+);
