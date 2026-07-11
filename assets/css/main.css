@@ -3805,7 +3805,11 @@ input, select, textarea {
 }
 /* Apply this class to the div you want to frame */
 .frame-this-element {
-    border: 1px solid #767676; /* Standard gray frame color */
-    border-radius: 8px;       /* Slightly rounded corners, as shown in your sample */
-    padding: 20px;            /* Adds space inside the frame so content isn't cramped */
+    border: 2px solid #767676 !important; /* Thickens the gray border to ensure visibility */
+    border-radius: 8px;                  /* Smoothly rounds the corners */
+    padding: 30px;                       /* Creates space inside the frame */
+    margin: 30px auto;                   /* Centers it and gives it vertical breathing room */
+    max-width: 700px;                    /* Restricts the width so it looks like a box card */
+    background-color: #ffffff;           /* Gives the frame a solid white background color */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Optional: Adds a subtle depth drop-shadow */
 }
