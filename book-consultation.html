@@ -154,7 +154,61 @@
                 <label for="client-phone">Phone Number *</label>
                 <input type="tel" id="client-phone" name="phone" placeholder="e.g., +1 (555) 000-0000" pattern="[0-9\-\+\s()]+" required>
             </div>
+<!-- Row: Preferred Destination & Course Level (Side-by-Side) -->
+<div class="fields">
+    <div class="field half">
+        <label for="destination">Preferred Destination</label>
+        <select name="destination" id="destination" required>
+            <option value="">Select Country</option>
+            <option value="USA">United States (USA)</option>
+            <option value="UK">United Kingdom (UK)</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="Europe">Europe / Germany</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div class="field half">
+        <label for="degree">Interested In</label>
+        <select name="degree" id="degree" required>
+            <option value="">Select Degree Level</option>
+            <option value="Bachelors">Bachelor's Degree</option>
+            <option value="Masters">Master's / PG Degree</option>
+            <option value="MBA">MBA</option>
+            <option value="PhD">Ph.D. / Doctorate</option>
+        </select>
+    </div>
+</div>
 
+<!-- Row: Target Intake Year -->
+<div class="field">
+    <label for="intake">Target Intake Year</label>
+    <select name="intake" id="intake" required>
+        <option value="">Select Intake & Year</option>
+        <option value="Fall 2026">Fall 2026</option>
+        <option value="Spring 2027">Spring 2027</option>
+        <option value="Fall 2027">Fall 2027</option>
+        <option value="Later">Later</option>
+    </select>
+</div>
+
+<!-- Row: Goals (Textarea) -->
+<div class="field">
+    <label for="goals">Tell me your goals</label>
+    <textarea name="goals" id="goals" rows="4" placeholder="Briefly describe your career goals, specific universities in mind, or any questions you have..." required></textarea>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+            
             <!-- Submit Button -->
             <button type="submit" class="submit-btn">Submit Information</button>
         </form>
