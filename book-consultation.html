@@ -60,82 +60,83 @@
             min-height: 100vh;
             margin: 0;
         }
+<!-- Form Styling (Injecting into the main page flow) -->
+<style>
+    /* Form Container */
+    .form-container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 450px;
+        box-sizing: border-box;
+        margin: 40px auto; /* Centers the form block horizontally */
+    }
 
-        /* Form Container */
-        .form-container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 450px;
-            box-sizing: border-box;
-        }
+    .form-container h2 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        color: #333333;
+        font-size: 24px;
+    }
 
-        .form-container h2 {
-            margin-top: 0;
-            margin-bottom: 8px;
-            color: #333333;
-            font-size: 24px;
-        }
+    .form-container p {
+        color: #666666;
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
 
-        .form-container p {
-            color: #666666;
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
+    /* Form Fields */
+    .form-group {
+        margin-bottom: 20px;
+    }
 
-        /* Form Fields */
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #444444;
+        font-size: 14px;
+    }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #444444;
-            font-size: 14px;
-        }
+    .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #cccccc;
+        border-radius: 6px;
+        font-size: 15px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cccccc;
-            border-radius: 6px;
-            font-size: 15px;
-            box-sizing: border-box;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
+    /* Focus states for better accessibility */
+    .form-group input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    }
 
-        /* Focus states for better accessibility */
-        .form-group input:focus {
-            outline: none;
-            border-color: #007bff;
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
-        }
+    /* Submit Button */
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-        /* Submit Button */
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            background-color: #007bff;
-            border: none;
-            border-radius: 6px;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
 
-        .submit-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-
+<!-- Form Container Element -->
 <div class="form-container">
     <h2>Let's Connect</h2>
     <p>Please fill out the form below, and we will get back to you shortly.</p>
