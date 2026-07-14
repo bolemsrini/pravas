@@ -128,11 +128,14 @@
         <a href="/book-consultation.html" class="active" aria-current="page">Book a Consultation</a>
     </nav>
 
-    <!-- 2. Client Inquiry Form -->
+   <!-- 2. Client Inquiry Form -->
     <div class="form-container">
         <h2>Let's Connect</h2>
         <p>Please fill out the form below, and we will get back to you shortly.</p>
-        <form id="client-info-form" action="#" method="POST">
+        
+        <!-- Updated Action URL to connect to Formspree -->
+        <form id="client-info-form" action="https://formspree.io/f/vjapravas@gmail.com" method="POST">
+            
             <!-- Name Field -->
             <div class="form-group">
                 <label for="client-name">Full Name *</label>
@@ -145,10 +148,10 @@
                 <input type="email" id="client-email" name="email" placeholder="e.g., john.doe@example.com" required>
             </div>
 
-            <!-- Phone Field -->
+            <!-- Phone Field (Fixed validation pattern) -->
             <div class="form-group">
                 <label for="client-phone">Phone Number *</label>
-                <input type="tel" id="client-phone" name="phone" placeholder="e.g., +1 (555) 000-0000" pattern="[0-9+]" required>
+                <input type="tel" id="client-phone" name="phone" placeholder="e.g., +1 (555) 000-0000" pattern="[0-9\-\+\s()]+" required>
             </div>
 
             <!-- Submit Button -->
