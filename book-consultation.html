@@ -179,14 +179,14 @@
             <!-- Phone Field (Fixed validation pattern) -->
             <div class="form-group">
                 <label for="client-phone">Phone Number *</label>
-                <input type="tel" id="client-phone" name="phone" placeholder="e.g., +1 (555) 000-0000" pattern="[0-9\-\+\s()]+" required>
+                <input type="tel" id="client-phone" name="phone" placeholder="e.g., +1 (555) 000-0000" pattern="[0-9\-\+\s()]+" title="Please enter a valid phone number containing only digits, spaces, dashes, or parentheses." required>
             </div>
 <!-- Row: Preferred Destination & Course Level (Side-by-Side) -->
 <div class="fields">
     <div class="field half">
         <label for="destination">Preferred Destination</label>
         <select name="destination" id="destination" required>
-            <option value="">Select Country</option>
+            <option value="" disabled selected>Select Country</option>
             <option value="USA">United States (USA)</option>
             <option value="UK">United Kingdom (UK)</option>
             <option value="Canada">Canada</option>
