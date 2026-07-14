@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Book a Free Consultation - Pravas Consultants Hyderabad</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -8,119 +8,116 @@
     <meta name="keywords" content="book free consultation, study abroad counseling Hyderabad, overseas education assessment KPHB" />
     <meta name="referrer" content="same-origin" />
     <link rel="icon" href="/favicon.ico" />
-
+    
     <!-- Project Stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-   
+    
     <!-- URL Parameter Cleanup Script -->
     <script>
-      (function () {
-        try {
-          var url = new URL(location.href);
-          // Safely strips the session token from the address bar after reading it
-          if (url.searchParams.has('sessionToken')) {
-            url.searchParams.delete('sessionToken');
-            history.replaceState(null, '', url.toString());
-          }
-        } catch (error) {
-          console.error("URL manipulation failed:", error);
-        }
-      })();
+        (function () {
+            try {
+                var url = new URL(location.href);
+                if (url.searchParams.has('sessionToken')) {
+                    url.searchParams.delete('sessionToken');
+                    history.replaceState(null, '', url.toString());
+                }
+            } catch (error) {
+                console.error("URL manipulation failed:", error);
+            }
+        })();
     </script>
-
+    
     <!-- Application Specific Utilities -->
     <script src="/utils-theme-detector.js"></script>
     <script src="/utils-device-layout.js"></script>
+    
+    <!-- Custom Page Styling -->
     <style>
         /* Modern Reset & Font */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f7f6;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             min-height: 100vh;
             margin: 0;
         }
-<!-- Form Styling (Injecting into the main page flow) -->
-<style>
-    /* Form Container */
-    .form-container {
-        background-color: #ffffff;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 450px;
-        box-sizing: border-box;
-        margin: 40px auto; /* Centers the form block horizontally */
-    }
 
-    .form-container h2 {
-        margin-top: 0;
-        margin-bottom: 8px;
-        color: #333333;
-        font-size: 24px;
-    }
+        /* Form Container */
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+            margin: 40px auto; /* Centers the form block horizontally */
+        }
 
-    .form-container p {
-        color: #666666;
-        font-size: 14px;
-        margin-bottom: 24px;
-    }
+        .form-container h2 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #333333;
+            font-size: 24px;
+        }
 
-    /* Form Fields */
-    .form-group {
-        margin-bottom: 20px;
-    }
+        .form-container p {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
 
-    .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        color: #444444;
-        font-size: 14px;
-    }
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-    .form-group input {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #cccccc;
-        border-radius: 6px;
-        font-size: 15px;
-        box-sizing: border-box;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444444;
+            font-size: 14px;
+        }
 
-    /* Focus states for better accessibility */
-    .form-group input:focus {
-        outline: none;
-        border-color: #007bff;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
-    }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    /* Submit Button */
-    .submit-btn {
-        width: 100%;
-        padding: 14px;
-        background-color: #007bff;
-        border: none;
-        border-radius: 6px;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+        /* Focus states for accessibility */
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+        }
 
-    .submit-btn:hover {
-        background-color: #0056b3;
-    }
-</style>
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-  </head>
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body class="app-container-view">
 
     <!-- 1. Global Application Navigation -->
@@ -130,50 +127,41 @@
         <a href="/services.html">Services</a>
         <a href="/book-consultation.html" class="active" aria-current="page">Book a Consultation</a>
     </nav>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Inquiry Form</title>
-    
-<!-- Form Container Element -->
-<div class="form-container">
-    <h2>Let's Connect</h2>
-    <p>Please fill out the form below, and we will get back to you shortly.</p>
-    
-    <form id="client-info-form" action="#" method="POST">
-        <!-- Name Field -->
-        <div class="form-group">
-            <label for="client-name">Full Name *</label>
-            <input type="text" id="client-name" name="name" placeholder="e.g., John Doe" required>
-        </div>
 
-        <!-- Email Field -->
-        <div class="form-group">
-            <label for="client-email">Email Address *</label>
-            <input type="email" id="client-email" name="email" placeholder="e.g., john.doe@example.com" required>
-        </div>
+    <!-- 2. Client Inquiry Form -->
+    <div class="form-container">
+        <h2>Let's Connect</h2>
+        <p>Please fill out the form below, and we will get back to you shortly.</p>
+        <form id="client-info-form" action="#" method="POST">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="client-name">Full Name *</label>
+                <input type="text" id="client-name" name="name" placeholder="e.g., John Doe" required>
+            </div>
 
-        <!-- Phone Field -->
-        <div class="form-group">
-            <label for="client-phone">Phone Number *</label>
-            <input type="tel" id="client-phone" name="phone" placeholder="e.g., +1 (555) 000-0000" pattern="[0-9\-+\s()]+" required>
-        </div>
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="client-email">Email Address *</label>
+                <input type="email" id="client-email" name="email" placeholder="e.g., john.doe@example.com" required>
+            </div>
 
-        <!-- Submit Button -->
-        <button type="submit" class="submit-btn">Submit Information</button>
-    </form>
-</div>
+            <!-- Phone Field -->
+            <div class="form-group">
+                <label for="client-phone">Phone Number *</label>
+                <input type="tel" id="client-phone" name="phone" placeholder="e.g., +1 (555) 000-0000" pattern="[0-9\-+\s()]+" required>
+            </div>
 
-</body>
-</html>
-    <!-- 2. Main Application Mount Point (Inside the body) -->
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Information</button>
+        </form>
+    </div>
+
+    <!-- 3. Main Application Mount Point -->
     <div id="root" class="app-container-view frame-this-element"></div>
 
-    <!-- 3. Module Scripts & Analytics (Inside the body) -->
+    <!-- 4. Module Scripts & Analytics -->
     <script type="module" src="/src/main.js"></script>
     <script src="/telemetry.js"></script>
 
-</body> <!-- Body closes here -->
+</body>
 </html>
