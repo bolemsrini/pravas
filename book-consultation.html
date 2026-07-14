@@ -31,7 +31,6 @@
     <!-- Application Specific Utilities -->
     <script src="/utils-theme-detector.js"></script>
     <script src="/utils-device-layout.js"></script>
-    
     <!-- Custom Page Styling -->
     <style>
         /* Modern Reset & Font */
@@ -69,12 +68,23 @@
             margin-bottom: 24px;
         }
 
-        /* Form Fields */
-        .form-group {
+        /* Form Fields & Structural Wrappers */
+        .form-group, .field {
             margin-bottom: 20px;
         }
 
-        .form-group label {
+        /* Container for Side-by-Side elements */
+        .fields {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .field.half {
+            flex: 1;
+        }
+
+        .form-group label, .field label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
@@ -82,7 +92,10 @@
             font-size: 14px;
         }
 
-        .form-group input {
+        /* Styling for ALL input elements: text, tel, select dropdowns, and textareas */
+        .form-group input, 
+        .field select, 
+        .field textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #cccccc;
@@ -90,11 +103,25 @@
             color: #000000; /* Ensures typed text is Black */
             font-size: 15px;
             box-sizing: border-box;
+            font-family: inherit; /* Ensures uniform font styling */
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Focus states for accessibility */
-        .form-group input:focus {
+        /* Standardized height and appearance adjustment for selects */
+        .field select {
+            height: 46px; 
+            background-color: #ffffff;
+        }
+
+        /* Prevent textareas from being sized completely out of shape */
+        .field textarea {
+            resize: vertical;
+        }
+
+        /* Focus states for accessibility across all inputs */
+        .form-group input:focus,
+        .field select:focus,
+        .field textarea:focus {
             outline: none;
             border-color: #007bff;
             box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
