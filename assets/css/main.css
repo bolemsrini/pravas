@@ -102,7 +102,7 @@ input, select, textarea {
     position: -webkit-sticky; /* Support for older Safari */
     position: sticky;
     top: 0;
-    z-index: 9999; /* Keeps it on top of other elements */
+    z-index: 10000; /* Keeps it on top of other elements */
     background-color: #ffffff; /* Add a background color so content doesn't bleed through */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow beneath */
 	}
