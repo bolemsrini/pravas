@@ -28,6 +28,7 @@
 		});
 
 	// Nav.
+	$nav._parallax = function() { ... }; // checks scrolling to toggle the navigation state
 		var $nav = $('#nav');
 
 		if ($nav.length > 0) {
