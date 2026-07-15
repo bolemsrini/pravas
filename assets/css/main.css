@@ -98,6 +98,15 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	#nav {
+    position: -webkit-sticky; /* Support for older Safari */
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* Keeps it on top of other elements */
+    background-color: #ffffff; /* Add a background color so content doesn't bleed through */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow beneath */
+	}
+
 	body {
 		background-color: #935d8c;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
