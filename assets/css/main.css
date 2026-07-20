@@ -3849,3 +3849,39 @@ input, select, textarea {
     display: block;
   }
 }
+/* FORCE MOBILE NAVIGATION DISPLAY */
+@media screen and (max-width: 768px) {
+  /* Ensure header container doesn't crop items */
+  header, nav, .navbar {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    background-color: #ffffff !important;
+  }
+
+  /* Force links/list items to unhide and stack vertically */
+  header ul, 
+  header nav div, 
+  header nav a, 
+  .nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 8px 0 !important;
+    color: #222222 !important; /* Ensure dark, readable text */
+  }
+
+  /* Ensure the CTA button scales down */
+  header a.btn, 
+  header .button,
+  header a[href*="Consultation"] {
+    display: inline-block !important;
+    margin: 10px auto !important;
+    width: 80% !important;
+  }
+}
