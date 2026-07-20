@@ -3885,3 +3885,11 @@ input, select, textarea {
     width: 80% !important;
   }
 }
+/* Standardize section width across the page */
+.page-container {
+  width: 100%;
+  max-width: 1200px; /* Adjust desired uniform width */
+  margin: 0 auto !important; /* Centers the container */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
