@@ -1,6 +1,3 @@
-@import url(fontawesome-all.min.css);
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
-
 /*
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
@@ -21,7 +18,6 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
 
@@ -73,15 +69,6 @@ input, select, textarea {
 }
 
 /* Basic */
-
-	@-ms-viewport {
-		width: device-width;
-	}
-
-	body {
-		-ms-overflow-style: scrollbar;
-	}
-
 	@media screen and (max-width: 480px) {
 
 		html, body {
@@ -102,7 +89,7 @@ input, select, textarea {
     position: -webkit-sticky; /* Support for older Safari */
     position: sticky;
     top: 0;
-    z-index: 10000; /* Keeps it on top of other elements */
+    z-index: 1000; /* Keeps it on top of other elements */
     background-color: #ffffff; /* Add a background color so content doesn't bleed through */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow beneath */
 	}
