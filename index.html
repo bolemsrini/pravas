@@ -523,5 +523,21 @@
             <p>&copy; 2026 Pravas Consultants. All rights reserved. | Built by <a href="https://srinivasbolem.com" target="_blank">Srinivas Bolem</a></p>
         </div>
     </footer>
+    <script>
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+        // Toggle the dropdown menu
+        navLinks.classList.toggle('active');
+        
+        // Toggle between hamburger bars icon and 'X' close icon
+        const icon = navToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+    });
+</script>
+
+    
 </body>
 </html>
