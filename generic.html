@@ -298,12 +298,46 @@
                 display: none; /* Add JS hamburger menu for mobile */
             }
         }
+        /* --- Mobile Toggle Button Styling --- */
+.mobile-nav-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--brand-purple);
+    cursor: pointer;
+}
+
+/* --- Mobile Styles (max-width: 768px) --- */
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block; /* Show hamburger button on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 1.25rem;
+        text-align: center;
+    }
+
+    /* Class added by JS when menu is open */
+    .nav-links.active {
+        display: flex;
+    }
+}
     </style>
 </head>
 <body>
 
     <!-- Header Navigation -->
-    <header>
     <header>
     <nav class="navbar">
         <a href="/" class="logo">PRAVAS <span>CONSULTANTS</span></a>
