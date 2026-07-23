@@ -421,6 +421,12 @@
             <p>&copy; 2026 Pravas Consultants. All rights reserved. | Built by <a href="https://srinivasbolem.com" target="_blank">Srinivas Bolem</a></p>
         </div>
     </footer>
-
+<script>
+    // Get today's date formatted as YYYY-MM-DD
+    const today = new Date().toISOString().split('T')[0];
+    
+    // Set the min attribute of the date picker to today
+    document.getElementById('preferred-date').setAttribute('min', today);
+</script>
 </body>
 </html>
