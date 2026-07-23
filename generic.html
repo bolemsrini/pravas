@@ -482,5 +482,20 @@
     // Set the min attribute of the date picker to today
     document.getElementById('preferred-date').setAttribute('min', today);
 </script>
+<script>
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+        // Toggle the dropdown menu
+        navLinks.classList.toggle('active');
+        
+        // Toggle between hamburger bars icon and 'X' close icon
+        const icon = navToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+    });
+</script>
+
 </body>
 </html>
