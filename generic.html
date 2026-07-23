@@ -345,7 +345,9 @@
                 <h2>Schedule Your Session</h2>
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Fill out the form below and our team will confirm your slot.</p>
                 
-                <form action="/submit-booking" method="POST">
+                <!-- <form action="/submit-booking" method="POST"> -->
+                <!-- Updated Action URL to connect to Formspree -->
+        <form id="client-info-form" action="https://formspree.io/f/mlgqdgll" method="POST">
                     <div class="form-group">
                         <label for="full-name">Full Name *</label>
                         <input type="text" id="full-name" name="full_name" required placeholder="Pranay Bolem">
