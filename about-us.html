@@ -292,6 +292,36 @@
             font-size: 1.25rem;
         }
 
+	/* Ensure testimonial card backgrounds and text contrast properly */
+.testimonial-card, .card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+/* Force dark text color for quote paragraphs */
+.testimonial-card p, 
+.testimonial-card .quote {
+    color: #333333 !important; /* Dark gray for readability */
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    display: block; /* Ensures block layout above student names */
+}
+
+/* Accent styling for student names */
+.student-info strong {
+    color: #002147; /* Navy/Dark brand color */
+    display: block;
+}
+
+.student-info span {
+    color: #666666;
+    font-size: 0.85rem;
+}
+		
         .card p {
             color: #ffffff !important;
   			text-shadow: 0 2px 4px
