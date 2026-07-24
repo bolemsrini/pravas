@@ -13,8 +13,7 @@
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
 
     <style>
         :root {
@@ -108,18 +107,15 @@
 
         /* --- Hero Section --- */
         .hero {
-    /* Replace 'your-image.jpg' with your actual image path or URL */
-    background-image: linear-gradient(rgba(26, 32, 44, 0.75), rgba(74, 20, 140, 0.75)), url('/images/about.jpg');
-    background-size: cover;       /* Ensures the image fills the entire hero container */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    color: var(--white);
-    padding: 5rem 2rem;
-    text-align: center;
-}
+    		background-image: linear-gradient(rgba(26, 32, 44, 0.75), rgba(74, 20, 140, 0.75)), url('/images/about.jpg');
+    		background-size: cover;       /* Ensures the image fills the entire hero container */
+    		background-position: center;  /* Centers the image */
+    		background-repeat: no-repeat; /* Prevents tiling */
+    		color: var(--white);
+    		padding: 5rem 2rem;
+    		text-align: center;
+		}
         
- 
-
         .hero-container {
             max-width: 900px;
             margin: 0 auto;
@@ -221,10 +217,10 @@
 
 		.card-us {
   		/* Relative path to your image */
-  		background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/NYCity.jpg');
-  		background-size: cover;
-  		background-position: center;
-  		background-repeat: no-repeat;
+  			background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/NYCity.jpg');
+  			background-size: cover;
+  			background-position: center;
+  			background-repeat: no-repeat;
 		}
 		
         .card {
@@ -236,38 +232,38 @@
         }
 
 		/* Target the Font Awesome icons inside destination cards */
-.destination-card i,
-.destination-card .fa,
-.destination-card [class*="fa-"] {
-  color: #ffaa00 !important; /* Bright gold/orange accent for icons */
-  font-size: 28px !important;
-  margin-bottom: 12px;
-  display: inline-block;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)); /* Pop against dark images */
-  opacity: 1 !important;
-  visibility: visible !important;
-}
+		.destination-card i,
+		.destination-card .fa,
+		.destination-card [class*="fa-"] {
+  		color: #ffaa00 !important; /* Bright gold/orange accent for icons */
+  		font-size: 28px !important;
+  		margin-bottom: 12px;
+  		display: inline-block;
+  		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)); /* Pop against dark images */
+  		opacity: 1 !important;
+  		visibility: visible !important;
+		}
 
 /* Target card headings (H2 / H3) */
-.destination-card h2,
-.destination-card h3 {
-  color: #ffffff !important; /* Pure white heading text */
-  font-size: 22px !important;
-  font-weight: 700 !important;
-  margin-bottom: 10px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9); /* Strong dark outline/shadow */
-  opacity: 1 !important;
-}
+		.destination-card h2,
+		.destination-card h3 {
+  		color: #ffffff !important; /* Pure white heading text */
+  		font-size: 22px !important;
+  		font-weight: 700 !important;
+  		margin-bottom: 10px;
+  		text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9); /* Strong dark outline/shadow */
+  		opacity: 1 !important;
+		}
 
 /* Optional: Subtle background overlay adjustment to make everything pop */
-.destination-card {
-  position: relative;
-  overflow: hidden;
-  /* Lightens top of card slightly so dark icons and headings stay crisp */
-  background: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)), 
-    url('your-image.jpg') center/cover no-repeat !important;
-}
+		.destination-card {
+  		position: relative;
+  		overflow: hidden;
+  		/* Lightens top of card slightly so dark icons and headings stay crisp */
+  		background: 
+    	linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)), 
+    	url('your-image.jpg') center/cover no-repeat !important;
+		}
 
 		.card:hover {
             transform: translateY(-4px);
@@ -286,46 +282,37 @@
         }
 
 	/* Ensure testimonial card backgrounds and text contrast properly */
-.testimonial-card, .card {
+	.testimonial-card, .card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     padding: 25px;
     border-radius: 8px;
-}
+	}
 
-/* Force dark text color for quote paragraphs */
-.testimonial-card p, 
-.testimonial-card .quote {
+	/* Force dark text color for quote paragraphs */
+	.testimonial-card p, 
+	.testimonial-card .quote {
     color: #333333 !important; /* Dark gray for readability */
     font-style: italic;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 15px;
     display: block; /* Ensures block layout above student names */
-}
+	}
 
-/* Accent styling for student names */
-.student-info strong {
+	/* Accent styling for student names */
+	.student-info strong {
     color: #002147; /* Navy/Dark brand color */
     display: block;
-}
+	}
 
-.student-info span {
+	.student-info span {
     color: #666666;
     font-size: 0.85rem;
-}
+	}
 		
-        .card p { color: #ffffff !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); font-size: 0.95rem;
-        }
-
-	/* .services-grid {
-  	display: grid;
-  	grid-template-columns: repeat(3, 1fr); 
-  	gap: 18px;                             
-  	max-width: 1100px;
-  	margin: 0 auto;
-		}
-	*/ 
+    .card p { color: #ffffff !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); font-size: 0.95rem;
+    }
 
 	.content-box-centered {
     max-width: 800px; /* Limits paragraph stretching on wide screens */
@@ -346,31 +333,31 @@
   	display: grid;
   	grid-template-columns: repeat(3, 1fr); 	/* 3 equal columns */
   	gap: 20px; 								/* Space between the cards */
-		}
+	}
 
 	@media (max-width: 992px) {
-  	.services-grid,
-  	.services-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  		.services-grid,
+  		.services-container {
+    	grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
   		}
 	}
 
 	@media (max-width: 600px) {
-  	.services-grid,
-  	.services-container {
-    grid-template-columns: 1fr; /* 1 column on mobile */
+  		.services-grid,
+  		.services-container {
+    	grid-template-columns: 1fr; /* 1 column on mobile */
   		}
 	}
 		
 	.service-card {
-  	background-color: #555555;
-  	border-radius: 8px;
-  	padding: 24px;
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: flex-start;
-  	box-sizing: border-box;
-		}
+  		background-color: #555555;
+  		border-radius: 8px;
+  		padding: 24px;
+  		display: flex;
+  		flex-direction: column;
+  		justify-content: flex-start;
+  		box-sizing: border-box;
+	}
 
 	.service-card a, 
 	.service-card h2 {
