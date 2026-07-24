@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Pravas Consultants</title>
+  <meta name="description" content="Comprehensive overseas education services including career counseling, university selection, application support, visa guidance, and test prep.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #ff5722;
+      --primary-hover: #e64a19;
+      --brand-purple: #4a148c;
+      --dark-navy: #1a202c;
+      --text-main: #2d3748;
+      --text-muted: #718096;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      color: var(--text-main);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+    }
+
+    /* --- Header & Nav --- */
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo img {
+      max-height: 45px;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .btn-cta {
+      background-color: var(--primary);
+      color: var(--white) !important;
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-cta:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--brand-purple);
+      cursor: pointer;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(rgba(26, 32, 44, 0.85), rgba(74, 20, 140, 0.85)), url('images/entrance.jpg') center/cover no-repeat;
+      color: var(--white);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #cbd5e0;
+      margin-bottom: 2rem;
+    }
+
+    /* --- Section & Cards --- */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header span {
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: var(--dark-navy);
+      margin-top: 0.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(74, 20, 140, 0.08);
+      color: var(--brand-purple);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-step {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      color: var(--dark-navy);
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    .service-tagline {
+      font-style: italic;
+      color: var(--brand-purple);
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-desc {
+      color: var(--text-main);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .service-features {
+      list-style: none;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+
+    .service-features li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .service-features li i {
+      color: var(--primary);
+      font-size: 0.85rem;
+    }
+
+    /* --- CTA Section --- */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--dark-navy) 0%, var(--brand-purple) 100%);
+      color: var(--white);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta-banner h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-banner p {
+      color: #cbd5e0;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: var(--dark-navy);
+      color: var(--white);
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #2d3748;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col p {
+      color: #a0aec0;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: var(--white);
+      background: #2d3748;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #718096;
+    }
+
+    .footer-bottom a {
+      color: #a0aec0;
+      text-decoration: none;
+    }
+
+    /* --- Mobile Responsive --- */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 1.25rem;
+        text-align: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" />
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#destinations">Destinations</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="generic.html" class="btn-cta">Book Free Consultation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>End-to-End Support<br>Every Step of the Way</h1>
+      <p>From finding your direction to settling down on campus, our expert guidance turns study abroad goals into reality.</p>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section class="section">
+    <div class="section-header">
+      <span>How We Help</span>
+      <h2>Services Built Around Your Journey</h2>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- 1. Career Counseling -->
+      <div class="service-card" id="career-counseling">
+        <div class="service-icon">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <span class="service-step">Step 01</span>
+        <h3>1. Career Counseling</h3>
+        <p class="service-tagline">"Find your direction before you pick a destination."</p>
+        <p class="service-desc">
+          We evaluate your academic background, strengths, and long-term ambitions to help you make confident decisions about course and country selection.
+        </p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> One-on-one counseling sessions</li>
+          <li><i class="fa-solid fa-check"></i> Psychometric & aptitude assessments</li>
+          <li><i class="fa-solid fa-check"></i> Profile & ROI analysis</li>
+        </ul>
+      </div>
+
+      <!-- 2. University Shortlisting -->
+      <div class="service-card" id="university-shortlisting">
+        <div class="service-icon">
+          <i class="fa-solid fa-building-columns"></i>
+        </div>
+        <span class="service-step">Step 02</span>
+        <h3>2. University Selection</h3>
+        <p class="service-tagline">"The right university for you — not just the rankings."</p>
+        <p class="service-desc">
+          We look beyond rankings to program strength, campus life, post-study work opportunities, and tuition budget to find your ideal choices.
+        </p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> Access to 500+ university partners</li>
+          <li><i class="fa-solid fa-check"></i> Profile-based shortlisting</li>
+          <li><i class="fa-solid fa-check"></i> Scholarship & funding strategy</li>
+        </ul>
+      </div>
+
+      <!-- 3. Application Support -->
+      <div class="service-card" id="application-support">
+        <div class="service-icon">
+          <i class="fa-solid fa-clipboard-list"></i>
+        </div>
+        <span class="service-step">Step 03</span>
+        <h3>3. Application Support</h3>
+        <p class="service-tagline">"Your application, crafted to stand out."</p>
+        <p class="service-desc">
+          We assist in writing persuasive Statements of Purpose (SOPs), tailoring Letters of Recommendation (LORs), and managing error-free submissions.
+        </p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> SOP & LOR drafting guidance</li>
+          <li><i class="fa-solid fa-check"></i> Academic resume enhancement</li>
+          <li><i class="fa-solid fa-check"></i> Deadline & document tracking</li>
+        </ul>
+      </div>
+
+      <!-- 4. Visa Guidance -->
+      <div class="service-card" id="visa-guidance">
+        <div class="service-icon">
+          <i class="fa-solid fa-passport"></i>
+        </div>
+        <span class="service-step">Step 04</span>
+        <h3>4. Visa Guidance</h3>
+        <p class="service-tagline">"Don't let paperwork stand between you and your dream."</p>
+        <p class="service-desc">
+          Navigate student visa procedures smoothly with meticulous documentation verification, financial proof structuring, and mock interviews.
+        </p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> Embassy documentation review</li>
+          <li><i class="fa-solid fa-check"></i> Mock visa interview sessions</li>
+          <li><i class="fa-solid fa-check"></i> Country-specific visa support</li>
+        </ul>
+      </div>
+
+      <!-- 5. Pre-Departure Briefing -->
+      <div class="service-card" id="pre-departure-briefing">
+        <div class="service-icon">
+          <i class="fa-solid fa-plane-departure"></i>
+        </div>
+        <span class="service-step">Step 05</span>
+        <h3>5. Pre-Departure Briefing</h3>
+        <p class="service-tagline">"Arrive prepared, not overwhelmed."</p>
+        <p class="service-desc">
+          Prepare for life overseas with guidance on student housing, international banking, SIM cards, flight bookings, and local networks.
+        </p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> Accommodation search support</li>
+          <li><i class="fa-solid fa-check"></i> Foreign currency & banking setup</li>
+          <li><i class="fa-solid fa-check"></i> Alumni & student community links</li>
+        </ul>
+      </div>
+
+      <!-- 6. Test Preparation -->
+      <div class="service-card" id="test-preparation">
+        <div class="service-icon">
+          <i class="fa-solid fa-pen-ruler"></i>
+        </div>
+        <span class="service-step">Step 06</span>
+        <h3>6. Test Preparation</h3>
+        <p class="service-tagline">"Hit your target score the first time."</p>
+        <p class="service-desc">
+          Structured coaching and diagnostic practice materials tailored for standardized exams required for abroad admissions.
+        </p>
+        <ul class="service-features">
+          <li><i class="fa-solid fa-check"></i> GRE, GMAT, SAT coaching</li>
+          <li><i class="fa-solid fa-check"></i> IELTS, TOEFL & Duolingo prep</li>
+          <li><i class="fa-solid fa-check"></i> Mock practice tests & evaluation</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="cta-banner">
+    <h3>Ready to Begin Your Overseas Journey?</h3>
+    <p>Book a free 1-on-1 counseling session with our experienced consultants today.</p>
+    <a href="generic.html" class="btn-cta">Book Free Consultation</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <img src="images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" />
+        </a>
+        <p>Your trusted guide to higher education abroad. We help students and families confidently navigate the path to world-class universities.</p>
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Meet Us At</h4>
+        <p>
+          2-22-275/1/16, 2nd Floor<br>
+          Sai Satya Commercial Complex<br>
+          Bhagyanagar Colony<br>
+          KPHB Main Road<br>
+          Opp Metro Pillar No A758<br>
+          Hyderabad 500072, Telangana, India
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong><br> +91 98486 32365<br> +91 63017 27882</p>
+        <p style="margin-top: 0.5rem;"><strong>Email:</strong><br> info@pravas.org<br> hydpravas@gmail.com</p>
+        <p style="margin-top: 0.5rem;"><strong>Hours:</strong><br> Mon-Sat: 10 AM - 7 PM<br> Sun: By appointment</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pravas Consultants. All rights reserved. | Built by <a href="https://srinivasbolem.com" target="_blank">Srinivas Bolem</a></p>
+    </div>
+  </footer>
+
+  <!-- Navigation Toggle JS Script -->
+  <script>
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+  </script>
+</body>
+</html>
