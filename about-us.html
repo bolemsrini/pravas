@@ -184,8 +184,22 @@
     /* Testimonials Section */
     .testimonials-section {
       background-color: var(--bg-light);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/student.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Optional: creates a parallax scrolling effect */
+      padding: 60px 0;
     }
 
+    .testimonials-section .section-header h2 {
+       color: #ffffff;
+    }
+
+    .testimonials-section .section-header span {
+        color: var(--primary); /* Keeps your primary accent color readable */
+    } 
+    
     .testimonial-slider {
       position: relative;
       max-width: 800px;
