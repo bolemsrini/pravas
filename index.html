@@ -562,38 +562,11 @@
         gap: 1.25rem;
         text-align: center;
         }
-
-        /* Class added by JS when menu is open */
+		/* Class added by JS when menu is open */
         .nav-links.active {
         display: flex;
         }
-
-		document.addEventListener('DOMContentLoaded', () => {
-  const adModal = document.getElementById('adModal');
-  const closeBtn = document.getElementById('closeAdBtn');
-
-  // 1. Show the ad modal 1 second after page loads
-  setTimeout(() => {
-    adModal.style.display = 'flex';
-  }, 1000);
-
-  // 2. Function to close the modal
-  window.closeAd = function() {
-    adModal.style.display = 'none';
-  };
-
-  // 3. Close when clicking the 'X' button
-  closeBtn.addEventListener('click', closeAd);
-
-  // 4. Close when clicking outside the content box
-  window.addEventListener('click', (e) => {
-    if (e.target === adModal) {
-      closeAd();
-    }
-  });
-});
-}
-    </style>
+</style>
 </head>
 <body>
 
@@ -822,6 +795,31 @@
       <a href="#consultation" class="btn-ad-cta" onclick="closeAd()">Claim Your Free Spot</a>
     </div>
   </div>
-</div>    
+</div>
+	document.addEventListener('DOMContentLoaded', () => {
+  const adModal = document.getElementById('adModal');
+  const closeBtn = document.getElementById('closeAdBtn');
+
+  // 1. Show the ad modal 1 second after page loads
+  setTimeout(() => {
+    adModal.style.display = 'flex';
+  }, 1000);
+
+  // 2. Function to close the modal
+  window.closeAd = function() {
+    adModal.style.display = 'none';
+  };
+
+  // 3. Close when clicking the 'X' button
+  closeBtn.addEventListener('click', closeAd);
+
+  // 4. Close when clicking outside the content box
+  window.addEventListener('click', (e) => {
+    if (e.target === adModal) {
+      closeAd();
+    }
+  });
+});
+}
 </body>
 </html>
