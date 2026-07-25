@@ -567,6 +567,31 @@
         .nav-links.active {
         display: flex;
         }
+
+		document.addEventListener('DOMContentLoaded', () => {
+  const adModal = document.getElementById('adModal');
+  const closeBtn = document.getElementById('closeAdBtn');
+
+  // 1. Show the ad modal 1 second after page loads
+  setTimeout(() => {
+    adModal.style.display = 'flex';
+  }, 1000);
+
+  // 2. Function to close the modal
+  window.closeAd = function() {
+    adModal.style.display = 'none';
+  };
+
+  // 3. Close when clicking the 'X' button
+  closeBtn.addEventListener('click', closeAd);
+
+  // 4. Close when clicking outside the content box
+  window.addEventListener('click', (e) => {
+    if (e.target === adModal) {
+      closeAd();
+    }
+  });
+});
 }
     </style>
 </head>
