@@ -295,6 +295,39 @@
             font-size: 0.95rem;
         }
 
+
+		/* Container wrapping all 6 service cards */
+.services-grid, 
+#services .grid-container {
+  display: grid !important;
+  /* Strictly force 3 equal columns */
+  grid-template-columns: repeat(3, 1fr) !important; 
+  gap: 24px; /* Uniform spacing between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch; /* Ensures all cards in a row have identical height */
+}
+
+/* Individual Card Fixes */
+.service-card {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustment for tablet/mobile screens */
+@media screen and (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on tablets */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr !important; /* 1 column on mobile devices */
+  }
+}
 	/* .services-grid {
   	display: grid;
   	grid-template-columns: repeat(3, 1fr); 
