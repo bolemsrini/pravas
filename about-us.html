@@ -281,6 +281,96 @@
             font-size: 1.25rem;
         }
 
+		/* ==========================================
+   1. REMOVE EXCESS SPACE BELOW TESTIMONIALS
+   ========================================== */
+.testimonial-slider,
+.student-stories,
+#testimonials {
+  /* Remove huge bottom paddings or fixed heights */
+  margin-bottom: 20px !important;
+  padding-bottom: 20px !important;
+  min-height: auto !important; /* Prevents container from taking extra vertical space */
+}
+
+/* ==========================================
+   2. "OUR PROCESS" HORIZONTAL COLUMNS
+   ========================================== */
+.process-section {
+  padding: 30px 20px 50px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.process-section header h2 {
+  font-size: 28px;
+  color: #1a365d;
+  margin-bottom: 30px;
+}
+
+/* Force items into horizontal columns */
+ul.statistics {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: stretch; /* Keeps all column cards equal height */
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Individual Process Cards */
+ul.statistics li {
+  flex: 1 1 0px; /* Forces all 5 cards to take equal width in 1 row */
+  background: #ffffff;
+  padding: 20px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+ul.statistics li .icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+ul.statistics li strong {
+  font-size: 15px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+ul.statistics li p {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media screen and (max-width: 900px) {
+  ul.statistics {
+    flex-wrap: wrap !important; /* Wrap to multi-row on smaller screens */
+  }
+  
+  ul.statistics li {
+    flex: 1 1 45%; /* 2 columns on tablets */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ul.statistics li {
+    flex: 1 1 100%; /* 1 column on mobile phones */
+  }
+}
+		
 	/* Ensure testimonial card backgrounds and text contrast properly */
 	.testimonial-card, .card {
     background-color: #ffffff;
