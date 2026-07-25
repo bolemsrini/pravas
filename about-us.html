@@ -1,672 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Pravas Consultants - Overseas Education Mentors</title>
-    <meta name="description" content="Your trusted guide for studying abroad in USA, Canada, UK, Australia, New Zealand, and Europe. 15+ years of experience in career counseling and student visa guidance.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Pravas Consultants - Overseas Education Mentors</title>
+  <meta name="description" content="Your trusted guide for studying abroad in USA, Canada, UK, Australia, New Zealand, and Europe. 15+ years of experience in career counseling and student visa guidance.">
 
-    <style>
-        :root {
-            --primary: #ff5722;
-            --primary-hover: #e64a19;
-            --brand-purple: #4a148c;
-            --dark-navy: #1a202c;
-            --text-main: #2d3748;
-            --text-muted: #718096;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
-            --border: #e2e8f0;
-            --radius: 8px;
-        }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 
-        body {
-            color: var(--text-main);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-        }
-
-        /* --- Header & Nav --- */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--brand-purple);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .btn-cta {
-            background-color: var(--primary);
-            color: var(--white) !important;
-            padding: 0.65rem 1.25rem;
-            border-radius: var(--radius);
-            font-weight: 600;
-            transition: background 0.2s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-cta:hover {
-            background-color: var(--primary-hover);
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-    		background-image: linear-gradient(rgba(26, 32, 44, 0.75), rgba(74, 20, 140, 0.75)), url('/images/about.jpg');
-    		background-size: cover;       /* Ensures the image fills the entire hero container */
-    		background-position: center;  /* Centers the image */
-    		background-repeat: no-repeat; /* Prevents tiling */
-    		color: var(--white);
-    		padding: 5rem 2rem;
-    		text-align: center;
-		}
-        
-        .hero-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #cbd5e0;
-            margin-bottom: 2rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-            padding: 0.65rem 1.25rem;
-            border-radius: var(--radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--white);
-            color: var(--dark-navy);
-        }
-
-        /* --- Stats Section --- */
-        .stats {
-            background: var(--black);
-            border-bottom: 1px solid var(--border);
-            padding: 2.5rem 2rem;
-        }
-
-        .stats-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            font-weight: 800;
-        }
-
-        .stat-item p {
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        /* --- Destinations Section --- */
-        .section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header span {
-            text-transform: uppercase;
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-        }
-
-        .section-header h2 {
-            font-size: 2.2rem;
-            color: var(--dark-navy);
-            margin-top: 0.5rem;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-		.card-us {
-  		/* Relative path to your image */
-  			background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/NYCity.jpg');
-  			background-size: cover;
-  			background-position: center;
-  			background-repeat: no-repeat;
-		}
-		
-        .card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-		/* Target the Font Awesome icons inside destination cards */
-		.destination-card i,
-		.destination-card .fa,
-		.destination-card [class*="fa-"] {
-  		color: #ffaa00 !important; /* Bright gold/orange accent for icons */
-  		font-size: 28px !important;
-  		margin-bottom: 12px;
-  		display: inline-block;
-  		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)); /* Pop against dark images */
-  		opacity: 1 !important;
-  		visibility: visible !important;
-		}
-
-/* Target card headings (H2 / H3) */
-		.destination-card h2,
-		.destination-card h3 {
-  		color: #ffffff !important; /* Pure white heading text */
-  		font-size: 22px !important;
-  		font-weight: 700 !important;
-  		margin-bottom: 10px;
-  		text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9); /* Strong dark outline/shadow */
-  		opacity: 1 !important;
-		}
-
-/* Optional: Subtle background overlay adjustment to make everything pop */
-		.destination-card {
-  		position: relative;
-  		overflow: hidden;
-  		/* Lightens top of card slightly so dark icons and headings stay crisp */
-  		background: 
-    	linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)), 
-    	url('your-image.jpg') center/cover no-repeat !important;
-		}
-
-		.card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .card-icon {
-            font-size: 2rem;
-            color: var(--brand-purple);
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-        }
-
-		/* ==========================================
-   1. REMOVE EXCESS SPACE BELOW TESTIMONIALS
-   ========================================== */
-.testimonial-slider,
-.student-stories,
-#testimonials {
-  /* Remove huge bottom paddings or fixed heights */
-  margin-bottom: 20px !important;
-  padding-bottom: 20px !important;
-  min-height: auto !important; /* Prevents container from taking extra vertical space */
-}
-
-/* ==========================================
-   2. "OUR PROCESS" HORIZONTAL COLUMNS
-   ========================================== */
-.process-section {
-  padding: 30px 20px 50px 20px;
-  background-color: #f8f9fa;
-  text-align: center;
-}
-
-.process-section header h2 {
-  font-size: 28px;
-  color: #1a365d;
-  margin-bottom: 30px;
-}
-
-/* Force items into horizontal columns */
-ul.statistics {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center;
-  align-items: stretch; /* Keeps all column cards equal height */
-  gap: 16px;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* Individual Process Cards */
-ul.statistics li {
-  flex: 1 1 0px; /* Forces all 5 cards to take equal width in 1 row */
-  background: #ffffff;
-  padding: 20px 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-ul.statistics li .icon {
-  font-size: 32px;
-  margin-bottom: 12px;
-  display: inline-block;
-}
-
-ul.statistics li strong {
-  font-size: 15px;
-  margin-bottom: 8px;
-  display: block;
-}
-
-ul.statistics li p {
-  font-size: 13px;
-  color: #555555;
-  line-height: 1.4;
-  margin: 0;
-}
-
-/* Mobile & Tablet Responsiveness */
-@media screen and (max-width: 900px) {
-  ul.statistics {
-    flex-wrap: wrap !important; /* Wrap to multi-row on smaller screens */
-  }
-  
-  ul.statistics li {
-    flex: 1 1 45%; /* 2 columns on tablets */
-  }
-}
-
-@media screen and (max-width: 600px) {
-  ul.statistics li {
-    flex: 1 1 100%; /* 1 column on mobile phones */
-  }
-}
-		
-	/* Ensure testimonial card backgrounds and text contrast properly */
-	.testimonial-card, .card {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    padding: 25px;
-    border-radius: 8px;
-	}
-
-	/* Force dark text color for quote paragraphs */
-	.testimonial-card p, 
-	.testimonial-card .quote {
-    color: #333333 !important; /* Dark gray for readability */
-    font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    display: block; /* Ensures block layout above student names */
-	}
-
-	/* Container sizing */
-.testimonial-slider {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  min-height: 220px; /* Prevents layout jump during slide switch */
-}
-
-/* Hide all cards by default */
-.testimonial-card {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* Active card displayed with smooth fade-in */
-.testimonial-card.active {
-  display: block;
-  opacity: 1;
-}
-		
-	/* Accent styling for student names */
-	.student-info strong {
-    color: #002147; /* Navy/Dark brand color */
-    display: block;
-	}
-
-	.student-info span {
-    color: #666666;
-    font-size: 0.85rem;
-	}
-		
-    .card p { color: #ffffff !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); font-size: 0.95rem;
+  <style>
+    :root {
+      --primary: #ff5722;
+      --primary-hover: #e64a19;
+      --brand-purple: #4a148c;
+      --dark-navy: #1a202c;
+      --text-main: #2d3748;
+      --text-muted: #718096;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --radius: 8px;
     }
 
-	.content-box-centered {
-    max-width: 800px; /* Limits paragraph stretching on wide screens */
-	text-align: justify;
-    text-justify: inter-word;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px; /* Prevents touching edges on mobile screens */
-	}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-	.content-box p {
-    text-align: justify;
-    text-justify: inter-word; /* Ensures clean spacing between words */
-	}	
-		
-	.services-grid, 
-	.services-container {
-  	display: grid;
-  	grid-template-columns: repeat(3, 1fr); 	/* 3 equal columns */
-  	gap: 20px; 								/* Space between the cards */
-	}
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+    }
 
-	@media (max-width: 992px) {
-  		.services-grid,
-  		.services-container {
-    	grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-  		}
-	}
+    /* Layout & Containers */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-	@media (max-width: 600px) {
-  		.services-grid,
-  		.services-container {
-    	grid-template-columns: 1fr; /* 1 column on mobile */
-  		}
-	}
-		
-	.service-card {
-  		background-color: #555555;
-  		border-radius: 8px;
-  		padding: 24px;
-  		display: flex;
-  		flex-direction: column;
-  		justify-content: flex-start;
-  		box-sizing: border-box;
-	}
+    .section-padding {
+      padding: 60px 0;
+    }
 
-	.service-card a, 
-	.service-card h2 {
-  	color: #ffffff; /* Use #ffffff for white, or your preferred hex code */
-		}
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
 
-/* 1. Ensure equal side margins and container width */
-.container {
-    max-width: 1100px; /* Or 1200px matching your header/hero */
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    .section-header span {
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
 
-/* 2. Consistent section spacing */
-.section-padding {
-    padding: 60px 0;
-}
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: var(--dark-navy);
+      margin-top: 0.5rem;
+    }
 
-/* 3. Center section headers uniformly */
-.section-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
+    /* Header & Navigation */
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-/* 4. Center-align testimonials content and align cards */
-.testimonial-card {
-    text-align: center;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}		
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
 
-	/* ==========================================
-   OUR PROCESS SECTION STYLES
-   ========================================== */
-.process-section {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
-  text-align: center;
-}
+    .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--brand-purple);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
 
-.process-section .section-header h2 {
-  font-size: 32px;
-  color: #1a365d;
-  margin-bottom: 40px;
-}
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
 
-ul.statistics {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-ul.statistics li {
-  flex: 1 1 200px;
-  max-width: 230px;
-  background: #ffffff;
-  padding: 25px 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
+    .nav-links a:hover {
+      color: var(--primary);
+    }
 
-ul.statistics li:hover {
-  transform: translateY(-5px);
-}
+    .btn-cta {
+      background-color: var(--primary);
+      color: var(--white) !important;
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-ul.statistics li .icon {
-  font-size: 36px;
-  margin-bottom: 15px;
-  display: inline-block;
-}
+    .btn-cta:hover {
+      background-color: var(--primary-hover);
+    }
 
-ul.statistics li strong {
-  font-size: 17px;
-  margin-bottom: 10px;
-  display: block;
-}
+    .mobile-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--brand-purple);
+      cursor: pointer;
+    }
 
-ul.statistics li p {
-  font-size: 13px;
-  color: #555555;
-  line-height: 1.5;
-  margin: 0;
-}
+    /* Hero Section */
+    .hero {
+      background-image: linear-gradient(rgba(26, 32, 44, 0.75), rgba(74, 20, 140, 0.75)), url('/images/about.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: var(--white);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
 
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-  ul.statistics li {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-}
-		
-        /* --- Footer --- */
-        footer {
-            background-color: var(--dark-navy);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-        }
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 3rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid #2d3748;
-        }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
 
-        .footer-col h4 {
-            margin-bottom: 1.2rem;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      color: #cbd5e0;
+      margin-bottom: 2rem;
+    }
 
-        .footer-col p {
-            color: #a0aec0;
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
+    /* Mission Section */
+    .content-box-centered {
+      max-width: 800px;
+      text-align: justify;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+    .content-box-centered p + p {
+      margin-top: 1rem;
+    }
 
-        .social-links a {
-            color: var(--white);
-            background: #2d3748;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
+    /* Testimonials Section */
+    .testimonials-section {
+      background-color: var(--bg-light);
+    }
 
-        .social-links a:hover {
-            background: var(--primary);
-        }
+    .testimonial-slider {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      min-height: 220px;
+    }
 
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 2rem auto 0;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #718096;
-        }
+    .testimonial-card {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
 
-        .footer-bottom a {
-            color: #a0aec0;
-            text-decoration: none;
-        }
+    .testimonial-card.active {
+      display: block;
+      opacity: 1;
+    }
 
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
-        }
-        /* --- Mobile Toggle Button Styling --- */
-        .mobile-nav-toggle {
-        display: none; /* Hidden on desktop */
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        color: var(--brand-purple);
-        cursor: pointer;
-        }
+    .testimonial-card p {
+      color: #333333;
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
 
-        /* --- Mobile Styles (max-width: 768px) --- */
-        @media (max-width: 768px) {
-        .mobile-nav-toggle {
-        display: block; /* Show hamburger button on mobile */
-        }
+    .student-info strong {
+      color: #002147;
+      display: block;
+    }
 
-        .nav-links {
-        display: none; /* Hide links by default on mobile */
+    .student-info span {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Our Process Section */
+    .process-section {
+      padding: 60px 20px;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .process-section h2 {
+      font-size: 32px;
+      color: #1a365d;
+      margin-bottom: 40px;
+    }
+
+    ul.statistics {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    ul.statistics li {
+      flex: 1 1 200px;
+      max-width: 230px;
+      background: var(--white);
+      padding: 25px 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    ul.statistics li:hover {
+      transform: translateY(-5px);
+    }
+
+    ul.statistics li .icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    ul.statistics li strong {
+      font-size: 17px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    ul.statistics li p {
+      font-size: 13px;
+      color: #555555;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark-navy);
+      color: var(--white);
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #2d3748;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col p {
+      color: #a0aec0;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: var(--white);
+      background: #2d3748;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-bottom a {
+      color: #a0aec0;
+      text-decoration: none;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -677,208 +377,217 @@ ul.statistics li p {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         gap: 1.25rem;
         text-align: center;
-        }
+      }
 
-        /* Class added by JS when menu is open */
-        .nav-links.active {
+      .nav-links.active {
         display: flex;
-        }
-}
-    </style>
+      }
+
+      ul.statistics li {
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-	<!-- Header Navigation -->
-    <header>
-        <nav class="navbar">
-        <a href="index.html" class="logo"> <img src="images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" /></a>
-        
-        <!-- Hamburger Icon Button for Mobile -->
-        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="index.html#destinations">Destinations</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="/about-us.html">About Us</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/generic.html" class="btn-cta">Book Free Consultation</a></li>
-        </ul>
-    </nav>
-</header>
-    
-
-    <!-- HERO / BANNER SECTION -->
-    <section class="hero hero-subpage">
-        <div class="hero-overlay">
-            <div class="container hero-content text-center">
-                <h1>Empowering Ambitions, Building Global Futures</h1>
-                <p>Your trusted overseas education mentors in Kukatpally, Hyderabad.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- MISSION & ABOUT US SECTION -->
-    <section class="about-section section-padding">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subheading">OUR MISSION</span>
-                <h2>Guiding You Toward Global Success</h2>
-            </div>
-
-			<div class="content-box-centered">
-                    <p class="lead-text">
-                    At <strong>Pravas Consultants</strong>, our mission is to simplify global education and empower ambitious students from Hyderabad and across India to achieve their dreams of studying abroad. As a trusted overseas education consultancy in KPHB, we bridge the gap between world-class international universities and deserving candidates through honest, transparent, and personalized mentorship.
-                </p>
-                <p class="lead-text margin-top-sm">
-                    Founded by the most experienced consultant, <strong>Srinivas Bolem</strong>, we are dedicated to providing end-to-end guidance—from choosing the right country and university alignment to navigating complex application deadlines and securing student visas for the USA, UK, Canada, Australia, and Europe. We don't just process files; we build global futures.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- STUDENT TESTIMONIALS SECTION -->
-    <section class="testimonials-section section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subheading">STUDENT STORIES</span>
-                <h2>Real Students, Real Results</h2>
-            <div class="testimonial-slider">
-				<!-- Testimonial 1 -->
-				<div class="testimonial-card active">
-                    <p>"I chose Pravas consultants as my guide for Master's admission in the USA and I am very much happy for this decision. The response and process is very fast where Within a day 6 colleges that I asked were applied. I am a working professional so couldn't give much time for the process, but Pravas consultants made sure that everything is done on time. They even helped me for Visa Interview. I would highly suggest Pravas consultants for smooth and tension free application process for your higher studies at other countries."</p>
-                    <h4>Varshitha Choudary Vasireddy</h4>
-                    <span>University of Oklahoma, USA</span>
-                </div>
-                <!-- Testimonial 2 -->
-    			<div class="testimonial-card">
-      				<p>"Firstly, my heartful thanks to Pravas Consultants.<br>  I am very happy with the overall service provided by Pravas Consultants. Srinivas helped me in advising all the options and to find the right University for my profile. I would recommend Pravas Consultants services for its quick responses and great turn around time."</p>
-      				<h4>Dinesh Gupta Paluru</h4>
-      				<span>Cape Breton University, Canada</span>
-    			</div>
-    			<!-- Testimonial 3 -->
-    			<div class="testimonial-card">
-      				<p>"I had no idea where to start. The counselors at Pravas understood my goals and helped me find the perfect program. The SOP they helped me craft was a game-changer."</p>
-      				<h4>Venkata Akhil Tumpudi</h4>
-      				<span>University of Melbourne, Australia</span>
-    			</div>
-				<!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <p>"Pravas made the entire process feel manageable. From shortlisting universities to visa prep, they were with me every step. I have completed Health Care Management at Cape Breton University."</p>
-                    <h4>Pavani Talasila</h4>
-                    <span>Cape Breton University, Canada</span>
-                </div>
-                <!-- Testimonial 5 -->
-                <div class="card testimonial-card text-center">
-                    <p class="quote" style="color: #000000">"What I loved most was how genuinely they cared. It didn't feel transactional — it felt like getting advice from a knowledgeable older sibling who had been through it all."</p>
-                    <div class="student-info">
-                        <strong>Akash Raj Ayyagari</strong>
-                        <span>University of North Texas, USA</span>
-                    </div>
-                </div>
-
-				
-            </div>
-
-            <div class="text-center margin-top-md">
-                <a href="contact.html" class="btn btn-primary">Get Started</a>
-                <a href="services.html" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-<!-- OUR PROCESS SECTION -->
-<section class="process-section">
+  <!-- Header Navigation -->
   <header>
-    <h2>Our Process</h2>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" />
+      </a>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="index.html#destinations">Destinations</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/generic.html" class="btn-cta">Book Free Consultation</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <ul class="statistics">
-    <li class="style1">
-      <span class="icon solid fa-handshake" style="color: #1a365d !important;"></span>
-      <strong>Free Consultation</strong>
-      <p>We start with a no-obligation session to understand your goals, profile, and timeline.</p>
-    </li>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Empowering Ambitions, Building Global Futures</h1>
+      <p>Your trusted overseas education mentors in Kukatpally, Hyderabad.</p>
+    </div>
+  </section>
 
-    <li class="style2">
-      <span class="icon solid fa-book-open" style="background: linear-gradient(90deg, #00d2ff, #0b3c5d); -webkit-background-clip: text; -webkit-text-fill-color: transparent !important;"></span>
-      <strong>Profile Assessment</strong>
-      <p>We evaluate your academics, test scores, and career goals to map the best path forward.</p>
-    </li>
+  <!-- MISSION & ABOUT US SECTION -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span>OUR MISSION</span>
+        <h2>Guiding You Toward Global Success</h2>
+      </div>
+      <div class="content-box-centered">
+        <p>
+          At <strong>Pravas Consultants</strong>, our mission is to simplify global education and empower ambitious students from Hyderabad and across India to achieve their dreams of studying abroad. As a trusted overseas education consultancy in KPHB, we bridge the gap between world-class international universities and deserving candidates through honest, transparent, and personalized mentorship.
+        </p>
+        <p>
+          Founded by the most experienced consultant, <strong>Srinivas Bolem</strong>, we are dedicated to providing end-to-end guidance—from choosing the right country and university alignment to navigating complex application deadlines and securing student visas for the USA, UK, Canada, Australia, and Europe. We don't just process files; we build global futures.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <li class="style3">
-      <span class="icon solid fa-globe" style="color: #1a365d !important;"></span>
-      <strong>University Shortlist</strong>
-      <p>We present a curated list of universities that match your profile and aspirations.</p>
-    </li>
-
-    <li class="style4">
-      <span class="icon solid fa-briefcase" style="background: linear-gradient(60deg, #990000 25%, #0b3c5d 25%, #990000 50%, #ff5f1f 50%, #990000 75%, #0b3c5d 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent !important;"></span>
-      <strong>Application & Docs</strong>
-      <p>We guide you through every document, SOP, and application form — nothing falls through the cracks.</p>
-    </li>
-
-    <li class="style5">
-      <span class="icon solid fa-plane" style="background: linear-gradient(45deg, #0b3c5d 25%, #00d2ff 50%, #ff5f1f 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent !important;"></span>
-      <strong>Visa & Departure</strong>
-      <p>We prepare you for your visa interview and brief you on everything you need for a smooth arrival.</p>
-    </li>
-  </ul>
-</section>
-	
-     <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <a href="index.html" class="logo"> <img src="images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" /></a>
-                <p>Your trusted guide to higher education abroad. We help students and families confidently navigate the path to world-class universities.</p>
-                <div class="social-links">
-                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h4>Meet Us At</h4>
-                <p>2-22-275/1/16, 2nd Floor<br> Sai Satya Commercial Complex<br>
-                Bhagyanagar Colony<br> KPHB Main Road<br>
-                Opp Metro Pillar No A758<br>
-                Hyderabad 500072, Telangana, India</p>
-            </div>
-
-            <div class="footer-col">
-                <h4>Contact Info</h4>
-                <p><strong>Phone:</strong><br> +91 98486 32365<br> +91 63017 27882</p>
-                <p><strong>Email:</strong><br> info@pravas.org<br> hydpravas@gmail.com</p>
-                <p><strong>Hours:</strong><br> Mon-Sat: 10 AM - 7 PM<br> Sun: By appointment</p>
-            </div>
+  <!-- STUDENT TESTIMONIALS SECTION -->
+  <section class="testimonials-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span>STUDENT STORIES</span>
+        <h2>Real Students, Real Results</h2>
+      </div>
+      
+      <div class="testimonial-slider">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card active">
+          <p>"I chose Pravas consultants as my guide for Master's admission in the USA and I am very much happy for this decision. The response and process is very fast where Within a day 6 colleges that I asked were applied. I am a working professional so couldn't give much time for the process, but Pravas consultants made sure that everything is done on time. They even helped me for Visa Interview."</p>
+          <div class="student-info">
+            <strong>Varshitha Choudary Vasireddy</strong>
+            <span>University of Oklahoma, USA</span>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pravas Consultants. All rights reserved. | Built by <a href="https://srinivasbolem.com" target="_blank">Srinivas Bolem</a></p>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <p>"Firstly, my heartful thanks to Pravas Consultants. I am very happy with the overall service provided by Pravas Consultants. Srinivas helped me in advising all the options and to find the right University for my profile. I would recommend Pravas Consultants services for its quick responses and great turn around time."</p>
+          <div class="student-info">
+            <strong>Dinesh Gupta Paluru</strong>
+            <span>Cape Breton University, Canada</span>
+          </div>
         </div>
-    </footer>
-document.addEventListener('DOMContentLoaded', () => {
-  const testimonials = document.querySelectorAll('.testimonial-card');
-  let currentIndex = 0;
 
-  function showNextTestimonial() {
-    // Hide current card
-    testimonials[currentIndex].classList.remove('active');
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <p>"I had no idea where to start. The counselors at Pravas understood my goals and helped me find the perfect program. The SOP they helped me craft was a game-changer."</p>
+          <div class="student-info">
+            <strong>Venkata Akhil Tumpudi</strong>
+            <span>University of Melbourne, Australia</span>
+          </div>
+        </div>
 
-    // Move to next card index (loops back to 0 at the end)
-    currentIndex = (currentIndex + 1) % testimonials.length;
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <p>"Pravas made the entire process feel manageable. From shortlisting universities to visa prep, they were with me every step. I have completed Health Care Management at Cape Breton University."</p>
+          <div class="student-info">
+            <strong>Pavani Talasila</strong>
+            <span>Cape Breton University, Canada</span>
+          </div>
+        </div>
 
-    // Display next card
-    testimonials[currentIndex].classList.add('active');
-  }
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card">
+          <p>"What I loved most was how genuinely they cared. It didn't feel transactional — it felt like getting advice from a knowledgeable older sibling who had been through it all."</p>
+          <div class="student-info">
+            <strong>Akash Raj Ayyagari</strong>
+            <span>University of North Texas, USA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  // Change testimonial every 3000 milliseconds (3 seconds)
-  setInterval(showNextTestimonial, 3000);
-});
-	
+  <!-- OUR PROCESS SECTION -->
+  <section class="process-section">
+    <div class="container">
+      <h2>Our Process</h2>
+      <ul class="statistics">
+        <li>
+          <span class="icon solid fa-handshake" style="color: #1a365d;"></span>
+          <strong>Free Consultation</strong>
+          <p>We start with a no-obligation session to understand your goals, profile, and timeline.</p>
+        </li>
+        <li>
+          <span class="icon solid fa-book-open" style="color: #0b3c5d;"></span>
+          <strong>Profile Assessment</strong>
+          <p>We evaluate your academics, test scores, and career goals to map the best path forward.</p>
+        </li>
+        <li>
+          <span class="icon solid fa-globe" style="color: #1a365d;"></span>
+          <strong>University Shortlist</strong>
+          <p>We present a curated list of universities that match your profile and aspirations.</p>
+        </li>
+        <li>
+          <span class="icon solid fa-briefcase" style="color: #990000;"></span>
+          <strong>Application & Docs</strong>
+          <p>We guide you through every document, SOP, and application form — nothing falls through the cracks.</p>
+        </li>
+        <li>
+          <span class="icon solid fa-plane" style="color: #0b3c5d;"></span>
+          <strong>Visa & Departure</strong>
+          <p>We prepare you for your visa interview and brief you on everything you need for a smooth arrival.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <img src="images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" />
+        </a>
+        <p>Your trusted guide to higher education abroad. We help students and families confidently navigate the path to world-class universities.</p>
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Meet Us At</h4>
+        <p>2-22-275/1/16, 2nd Floor<br>
+        Sai Satya Commercial Complex<br>
+        Bhagyanagar Colony<br>
+        KPHB Main Road<br>
+        Opp Metro Pillar No A758<br>
+        Hyderabad 500072, Telangana, India</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong><br> +91 98486 32365<br> +91 63017 27882</p>
+        <p><strong>Email:</strong><br> info@pravas.org<br> hydpravas@gmail.com</p>
+        <p><strong>Hours:</strong><br> Mon-Sat: 10 AM - 7 PM<br> Sun: By appointment</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pravas Consultants. All rights reserved. | Built by <a href="https://srinivasbolem.com" target="_blank">Srinivas Bolem</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Nav Toggle
+      const navToggle = document.querySelector('.mobile-nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+
+      // Testimonials Slider
+      const testimonials = document.querySelectorAll('.testimonial-card');
+      let currentIndex = 0;
+
+      if (testimonials.length > 0) {
+        setInterval(() => {
+          testimonials[currentIndex].classList.remove('active');
+          currentIndex = (currentIndex + 1) % testimonials.length;
+          testimonials[currentIndex].classList.add('active');
+        }, 3000);
+      }
+    });
+  </script>
 </body>
 </html>
