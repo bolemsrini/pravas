@@ -107,6 +107,94 @@
             background-color: var(--primary-hover);
         }
 
+		/* Full-screen Dark Overlay */
+.ad-modal-overlay {
+  display: none; /* Hidden by default; JavaScript toggles this */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark dim background */
+  z-index: 9999; /* Sit on top of all page elements */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Content Box */
+.ad-modal-content {
+  position: relative;
+  background: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Ad Image Banner */
+.ad-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ad Text Content */
+.ad-body {
+  padding: 20px;
+}
+
+.ad-body h3 {
+  color: #1a365d;
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.ad-body p {
+  color: #555555;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.btn-ad-cta {
+  display: inline-block;
+  background-color: #ff6600;
+  color: #ffffff !important;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Close Button (X) */
+.ad-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 28px;
+}
+
+.ad-close-btn:hover {
+  background: #000000;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+		
         /* --- Hero Section --- */
         .hero {
     /* Replace 'your-image.jpg' with your actual image path or URL */
