@@ -229,6 +229,132 @@
     }
 
     /* Our Process Section */
+
+    /* Layout & Grid Setup */
+.process-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 40px;
+}
+
+/* 5 Cards in 1 Row on Desktop */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Base Card Styling */
+.process-card {
+  border-radius: 20px;
+  padding: 32px 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.process-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon Container Inside Cards */
+.icon-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.process-card:hover .icon-badge {
+  transform: scale(1.1);
+}
+
+/* Typography Inside Cards */
+.process-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 12px 0 10px 0;
+}
+
+.process-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Color Variations (Matching Icons & Backgrounds) */
+
+/* Step 1: Cyan / Blue */
+.card-blue {
+  background: linear-gradient(180deg, #93e6f5 0%, #b3f0fb 100%);
+  color: #0c4a6e;
+}
+.card-blue .icon-badge {
+  color: #0284c7;
+}
+
+/* Step 2: Purple */
+.card-purple {
+  background: linear-gradient(180deg, #a855f7 0%, #c084fc 100%);
+  color: #ffffff;
+}
+.card-purple .icon-badge {
+  color: #6b21a8;
+}
+
+/* Step 3: Periwinkle / Indigo */
+.card-indigo {
+  background: linear-gradient(180deg, #a5b4fc 0%, #c7d2fe 100%);
+  color: #1e1b4b;
+}
+.card-indigo .icon-badge {
+  color: #4338ca;
+}
+
+/* Step 4: Amber / Yellow */
+.card-amber {
+  background: linear-gradient(180deg, #fcd34d 0%, #fef08a 100%);
+  color: #78350f;
+}
+.card-amber .icon-badge {
+  color: #d97706;
+}
+
+/* Step 5: Coral / Orange */
+.card-orange {
+  background: linear-gradient(180deg, #ff8a65 0%, #ffab91 100%);
+  color: #ffffff;
+}
+.card-orange .icon-badge {
+  color: #c2410c;
+}
+
+/* Responsive fallback for smaller screens */
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+    
     /* Layout & Grid Setup */
 .process-section {
   padding: 60px 20px;
