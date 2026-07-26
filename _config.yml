@@ -1,2 +1,14 @@
+# Site Settings
+title: Pravas
+description: Official website for Pravas
+url: "https://yourdomain.com" # Replace with your custom domain or https://bolemsrini.github.io
+
+# Plugins
 plugins:
   - jekyll-sitemap
+
+# Files/Folders to ignore during build
+exclude:
+  - README.md
+  - README.txt
+  - LICENSE.txt
