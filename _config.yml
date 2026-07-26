@@ -1,7 +1,8 @@
 # Site Settings
 title: Pravas
 description: Official website for Pravas
-url: "https://pravas.org" # Replace with your custom domain or https://bolemsrini.github.io
+url: "https://pravas.org"
+baseurl: ""
 
 # Plugins
 plugins:
