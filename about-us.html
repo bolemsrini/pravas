@@ -329,6 +329,51 @@
   box-shadow: 0 8px 20px -4px rgba(234, 88, 12, 0.3);
 }
 
+    /* Layout & Grid Setup */
+.process-section {
+  padding: 60px 20px;
+  background-color: #f8fafc;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 40px;
+}
+
+/* Force 5 cards in 1 single row on desktop */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Enforces 5 equal columns */
+  gap: 16px;                            /* Reduced gap slightly so all 5 fit comfortably */
+  max-width: 1280px;                     /* Widen max container width for 5 columns */
+  margin: 0 auto;
+}
+
+/* Flashy Card Styling */
+.process-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 16px;                     /* Adjusted padding for a cleaner fit */
+  text-align: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.process-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive fallback for mobile and tablet screens */
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  }
+}
     
     .process-section {
       padding: 60px 20px;
