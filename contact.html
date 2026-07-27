@@ -628,7 +628,10 @@
     const navLinks = document.querySelector('.nav-links');
 
     navToggle.addEventListener('click', () => {
+      const isActive = navLinks.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isActive);
       navLinks.classList.toggle('active');
+      
       const icon = navToggle.querySelector('i');
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-xmark');
