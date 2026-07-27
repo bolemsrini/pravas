@@ -462,10 +462,13 @@
     </footer>
 <script>
     // Get today's date formatted as YYYY-MM-DD
-    const today = new Date().toISOString().split('T')[0];
-    
-    // Set the min attribute of the date picker to today
-    document.getElementById('preferred-date').setAttribute('min', today);
+    const now = new Date();
+const year = now.getFullYear();
+const month = String(now.getMonth() + 1).padStart(2, '0');
+const day = String(now.getDate()).padStart(2, '0');
+
+const localToday = `${year}-${month}-${day}`;
+document.getElementById('preferred-date').setAttribute('min', localToday);
 </script>
 <script>
     const navToggle = document.querySelector('.mobile-nav-toggle');
