@@ -293,8 +293,9 @@
       transition: border-color 0.2s;
     }
 
-    .form-control:focus {
-      border-color: var(--brand-purple);
+    .form-control:focus-visible {
+      outline: 2px solid var(--brand-purple);
+      border-color: transparent;
     }
 
     textarea.form-control {
