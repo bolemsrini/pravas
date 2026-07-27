@@ -479,6 +479,8 @@ document.getElementById('preferred-date').setAttribute('min', localToday);
     const navLinks = document.querySelector('.nav-links');
 
     navToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', isOpen);
         // Toggle the dropdown menu
         navLinks.classList.toggle('active');
         
