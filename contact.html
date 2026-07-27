@@ -668,6 +668,12 @@
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-xmark');
     });
+    const form = document.getElementById('client-info-form');
+    form.addEventListener('submit', (e) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Sending...';
+    });
   </script>
 </body>
 </html>
