@@ -681,14 +681,22 @@
   <!-- Navigation Toggle JS Script -->
   <script>
     const navToggle = document.querySelector('.mobile-nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navMenu = document.querySelector('.nav-menu');
+    const toggleIcon = navToggle.querySelector('i');
 
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      const icon = navToggle.querySelector('i');
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-xmark');
-    });
+    // Toggle active class on navigation menu
+    navMenu.classList.toggle('active');
+
+    // Optional: Swap hamburger icon with an 'X' (close) icon
+    if (navMenu.classList.contains('active')) {
+      toggleIcon.classList.remove('fa-bars');
+      toggleIcon.classList.add('fa-xmark');
+    } else {
+      toggleIcon.classList.remove('fa-xmark');
+      toggleIcon.classList.add('fa-bars');
+    }
+  });
   </script>
 </body>
 </html>
