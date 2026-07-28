@@ -23,6 +23,43 @@
         }
       }
     }
+
+      .highlights-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlights-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px; /* Spacing between the bold title and description */
+  margin-bottom: 12px;
+}
+
+/* Fixes title width so description column starts at the exact same spot */
+.highlight-title {
+  font-weight: 700;
+  min-width: 260px; /* Fixed column width for titles */
+  flex-shrink: 0;
+  color: #1f2937;
+}
+
+.highlight-desc {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .highlights-list li {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .highlight-title {
+    min-width: 100%;
+  }
+}
     /* Container for 2-Column Grid */
 .highlights-grid {
   display: grid;
