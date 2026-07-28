@@ -378,6 +378,9 @@
       <a href="services.html" class="hover:text-amber-400 transition">Services</a>
       <a href="about-us.html" class="hover:text-amber-400 transition">About</a>
       <a href="contact.html" class="hover:text-amber-400 transition">Contact</a>
+      <a href="book-consultation.html" class="md:hidden bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-5 py-2.5 rounded-lg transition shadow-md w-full text-center">
+        Book Free Consultation
+      </a>    
       </nav>
     </nav>
     <div class="hidden md:block">
@@ -603,6 +606,27 @@ document.getElementById('preferred-date').setAttribute('min', localToday);
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-xmark');
     });
+</script>
+    <script>
+  const navToggle = document.getElementById('mobile-nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', () => {
+      // Toggle visibility
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      
+      // Accessibility state
+      navToggle.setAttribute('aria-expanded', !isHidden);
+      
+      // Swap icon between hamburger (bars) and close (X)
+      const icon = navToggle.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+      }
+    });
+  }
 </script>
 
 </body>
