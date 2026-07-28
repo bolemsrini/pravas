@@ -74,6 +74,51 @@
       z-index: 1000;
     }
 
+    /* --- Mobile Styles (Default for small screens) --- */
+
+    /* Hide nav menu by default on mobile */
+    .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Positions menu right below the header */
+    left: 0;
+    width: 100%;
+    background-color: #0f172a; /* Tailwind slate-900 equivalent */
+    padding: 1rem 0;
+    }
+
+    /* Class toggled by JavaScript to show menu */
+    .nav-menu.active {
+    display: flex;
+    }
+
+    /* Style for mobile nav toggle button */
+    .mobile-nav-toggle {
+    display: block;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    }
+
+    /* --- Desktop Styles --- */
+    @media (min-width: 768px) {
+    /* Hide the hamburger button on desktop */
+    .mobile-nav-toggle {
+    display: none;
+    }
+
+    /* Always display nav menu horizontally on desktop */
+    .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    }
+    }
     .navbar {
       max-width: 1200px;
       margin: 0 auto;
