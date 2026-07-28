@@ -889,6 +889,16 @@
   <!-- Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+});
+    document.addEventListener('DOMContentLoaded', () => {
       // Mobile Nav Toggle
       const navToggle = document.querySelector('.mobile-nav-toggle');
       const navLinks = document.querySelector('.nav-links');
