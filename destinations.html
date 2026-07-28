@@ -24,6 +24,46 @@
       }
     }
   </script>
+
+  /* Container for 2-Column Grid */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 20px; /* Space between cards */
+  margin: 20px 0;
+}
+
+/* Individual Card Styling */
+.highlight-card {
+  background-color: #f9fafb;
+  border-left: 4px solid #f59e0b; /* Amber/gold accent bar */
+  padding: 16px 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Bold Title Styling */
+.highlight-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 6px 0;
+}
+
+/* Description Text Styling */
+.highlight-desc {
+  font-size: 0.925rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive adjustment for Mobile screens */
+@media (max-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: 1fr; /* Switch to 1 single column on mobile */
+  }
+}
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
