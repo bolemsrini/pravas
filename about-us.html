@@ -39,7 +39,157 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
+  <style>
+  /* --- Core CSS Variables & Base Setup --- */
+  :root {
+    --primary: #1d4ed8;
+    --primary-hover: #1e40af;
+    --secondary: #d97706;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --radius: 0.75rem;
+    --transition: all 0.3s ease;
+  }
+
+  /* --- Global Reset & Helpers --- */
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  .section-padding {
+    padding: 5rem 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-padding {
+      padding: 5rem 2rem;
+    }
+  }
+
+  /* --- Hero Section Typography --- */
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  /* --- Responsive Process Grid --- */
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default 1 column for mobile */
+    gap: 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    .process-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .process-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .process-card {
+    background: var(--white);
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+  }
+
+  .process-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+  }
+
+  /* --- Testimonials Slider --- */
+  .testimonial-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 250px;
+  }
+
+  .testimonial-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+
+  .testimonial-card.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+  }
+
+  /* --- Footer Custom Styling --- */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: var(--transition);
+    text-decoration: none;
+  }
+
+  .social-links a:hover {
+    background: var(--primary);
+  }
+
+  /* --- Navigation Controls --- */
+  .mobile-nav-toggle {
+    display: block;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-nav-toggle {
+      display: none;
+    }
+  }
+</style>
+   <!-- <style>
     :root {
       --primary: #ff5722;
       --primary-hover: #e64a19;
@@ -255,11 +405,6 @@
       text-align: center;
     }
 
-    .process-section h2, /*{
-      font-size: 32px;
-      color: #1a365d;
-      margin-bottom: 40px;
-    } */
     .section-title {
     text-align: center;
     font-size: 2.25rem;
@@ -298,12 +443,7 @@
   margin: 0;
   }    
 
-  /*    .process-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);  
-      } */
-
-/* Icon Container Inside Cards */
+ /* Icon Container Inside Cards */
 .icon-badge {
   width: 60px;
   height: 60px;
@@ -418,17 +558,7 @@
   color: #ffffff;
 }
     
-/*.process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-} */
-
 /* Flashy Card Styling */
-
-
 
 /* Icon Badges & Colors */
 .icon-badge {
@@ -601,7 +731,7 @@
         display: flex;
       }
     }
-  </style>
+  </style> -->
 </head>
 <body>
 
