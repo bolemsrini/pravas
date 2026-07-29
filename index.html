@@ -638,12 +638,13 @@
 <body>
 
 	<!-- Navigation Header -->
-<header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-    <a href="index.html" class="logo">
+<header class="bg-brand-navy text-white sticky top-0 z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center">
       <img src="/images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" width="180" height="50" fetchpriority="high" />
     </a>
-    <!-- Hamburger Icon Button for Mobile -->
+    <!-- Hamburger Icon Button for Mobile
         <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -655,7 +656,7 @@
             <li><a href="/about-us.html">About Us</a></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/book-consultation.html" class="btn-cta">Book Free Consultation</a></li>
-        </ul>
+        </ul> -->
 	  
     <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
       <a href="index.html" class="text-amber-400 font-semibold border-b-2 border-amber-400 pb-1">Home</a>
@@ -670,7 +671,24 @@
         Book Free Consultation
       </a>
     </div>
+		<button 
+        id="menuToggle" 
+        class="md:hidden text-2xl text-white focus:outline-none p-2 rounded hover:text-brand-gold transition-colors" 
+        aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      	</button>
   </div>
+  </div>
+		<div id="navWrapper" class="hidden md:hidden bg-brand-navy border-t border-slate-700/50 px-4 pt-2 pb-6 space-y-3 text-center">
+   		<a href="index.html" class="block py-2 text-white hover:text-brand-gold font-medium transition-colors">Home</a>
+    	<a href="destinations.html" class="block py-2 text-white hover:text-brand-gold font-medium transition-colors">Destinations</a>
+    	<a href="services.html" class="block py-2 text-white hover:text-brand-gold font-medium transition-colors">Services</a>
+    	<a href="about-us.html" class="block py-2 text-white hover:text-brand-gold font-medium transition-colors">About</a>
+    	<a href="contact.html" class="block py-2 text-white hover:text-brand-gold font-medium transition-colors">Contact</a>
+    	<a href="book-consultation.html" class="block py-2.5 mt-2 bg-brand-gold text-slate-950 font-semibold rounded-lg">
+      	Book Free Consultation
+    	</a>
+  		</div>
 </header>
 	
     <!-- Hero Section -->
