@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Pravas Consultants</title>
+  <meta name="description" content="Comprehensive overseas education services including career counseling, university selection, application support, visa guidance, and test prep.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0f172a',
+              blue: '#1e3a8a',
+              gold: '#d97706',
+              light: '#f8fafc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Add any custom non-Tailwind CSS here if needed */
+  </style>
+</head>
+<body class="font-inter bg-slate-50 text-slate-900">
+
+  <!-- Navigation Header -->
+  <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="logo">
+        <img src="/images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" width="180" height="50" fetchpriority="high" />
+      </a>
+      
+      <!-- Mobile Nav Toggle -->
+      <button id="mobile-menu-btn" class="md:hidden text-2xl text-white focus:outline-none" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+        <a href="destinations.html" class="hover:text-amber-400 transition">Destinations</a>
+        <a href="services.html" class="text-amber-400 font-semibold border-b-2 border-amber-400 pb-1">Services</a>
+        <a href="about-us.html" class="hover:text-amber-400 transition">About</a>
+        <a href="contact.html" class="hover:text-amber-400 transition">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:block">
+        <a href="book-consultation.html" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-5 py-2.5 rounded-lg transition shadow-md">
+          Book Free Consultation
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
+      <nav class="px-4 py-4 space-y-3 text-center">
+        <a href="index.html" class="block py-2 hover:bg-slate-700 rounded transition">Home</a>
+        <a href="destinations.html" class="block py-2 hover:bg-slate-700 rounded transition">Destinations</a>
+        <a href="services.html" class="block py-2 bg-slate-700 text-amber-400 font-semibold rounded">Services</a>
+        <a href="about-us.html" class="block py-2 hover:bg-slate-700 rounded transition">About</a>
+        <a href="contact.html" class="block py-2 hover:bg-slate-700 rounded transition">Contact</a>
+        <a href="book-consultation.html" class="block mt-4 bg-amber-500 text-slate-950 font-semibold py-3 rounded-lg transition shadow-md">
+          Book Free Consultation
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-slate-900 text-white py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+        End-to-End Support<br>Every Step of the Way
+      </h1>
+      <p class="text-xl text-slate-300">
+        From finding your direction to settling down on campus, our expert guidance turns study abroad goals into reality.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-amber-600 font-bold uppercase tracking-wider text-sm">How We Help</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mt-2">Services Built Around Your Journey</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Career Counseling -->
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+          <div class="text-3xl text-amber-500 mb-6 bg-amber-50 inline-flex p-4 rounded-lg">
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-950 mb-3">1. Career Counseling</h3>
+          <p class="text-slate-700 text-sm mb-4">"Find your direction before you pick a destination."</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            We evaluate your academic background, strengths, and long-term ambitions to help you make confident decisions about course and country selection.
+          </p>
+          <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-5">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> One-on-one counseling sessions</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Psychometric & aptitude assessments</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Country comparison based on your profile</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Profile & ROI analysis</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Course and career mapping</li>
+          </ul>
+        </div>
+
+        <!-- 2. University Selection -->
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+          <div class="text-3xl text-amber-500 mb-6 bg-amber-50 inline-flex p-4 rounded-lg">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-950 mb-3">2. University Selection</h3>
+          <p class="text-slate-700 text-sm mb-4">"The right university for you — not just the rankings."</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            We look beyond rankings to program strength, campus life, post-study work opportunities, and tuition budget to find your ideal choices. We shortlist universities where you have a genuine chance of admission and a great experience.
+          </p>
+          <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-5">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Access to 500+ university partners</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Profile-based shortlisting</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Intake planning (Fall/Spring/Winter)</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Backup and reach university strategy</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Scholarship & funding strategy</li>
+          </ul>
+        </div>
+
+        <!-- 3. Application Support -->
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+          <div class="text-3xl text-amber-500 mb-6 bg-amber-50 inline-flex p-4 rounded-lg">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-950 mb-3">3. Application Support</h3>
+          <p class="text-slate-700 text-sm mb-4">"Your application, crafted to stand out."</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            We assist in writing persuasive Statements of Purpose (SOPs), tailoring Letters of Recommendation (LORs), and managing error-free submissions. We manage every deadline and document requirement across multiple universities simultaneously.
+          </p>
+          <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-5">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> SOP & LOR drafting guidance</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Academic resume enhancement</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Deadline & document tracking</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Application portal submission support</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Document checklist and deadline management</li>
+          </ul>
+        </div>
+
+        <!-- 4. Visa Guidance -->
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+          <div class="text-3xl text-amber-500 mb-6 bg-amber-50 inline-flex p-4 rounded-lg">
+            <i class="fa-solid fa-passport"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-950 mb-3">4. Visa Guidance</h3>
+          <p class="text-slate-700 text-sm mb-4">"Don't let paperwork stand between you and your dream."</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Navigate student visa procedures smoothly with meticulous documentation verification, financial proof structuring, and mock interviews.
+          </p>
+          <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-5">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Embassy documentation review</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Mock visa interview sessions</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Country-specific visa support</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Financial proof and bank statement guidance</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> GIC, blocked account, and health insurance guidance</li>
+          </ul>
+        </div>
+
+        <!-- 5. Pre-Departure Briefing -->
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+          <div class="text-3xl text-amber-500 mb-6 bg-amber-50 inline-flex p-4 rounded-lg">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-950 mb-3">5. Pre-Departure Briefing</h3>
+          <p class="text-slate-700 text-sm mb-4">"Arrive prepared, not overwhelmed."</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Prepare for life overseas with guidance on student housing, international banking, SIM cards, flight bookings, and local networks.
+          </p>
+          <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-5">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Accommodation search support</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Foreign currency & banking setup</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Alumni & student community links</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Airport pickup and settling-in tips</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Cultural orientation and safety briefing</li>
+          </ul>
+        </div>
+
+        <!-- 6. Test Preparation -->
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+          <div class="text-3xl text-amber-500 mb-6 bg-amber-50 inline-flex p-4 rounded-lg">
+            <i class="fa-solid fa-pen-ruler"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-950 mb-3">6. Test Preparation</h3>
+          <p class="text-slate-700 text-sm mb-4">"Hit your target score the first time."</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Structured coaching and diagnostic practice materials tailored for standardized exams required for abroad admissions.
+          </p>
+          <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-5">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> GRE, GMAT, SAT coaching</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> IELTS, TOEFL & Duolingo prep</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Mock practice tests & evaluation</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Diagnostic tests and gap analysis</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Flexible batch timings and online options</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="bg-slate-950 text-white py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-3xl font-extrabold mb-4">Ready to Begin Your Overseas Journey?</h3>
+      <p class="text-lg text-slate-300 mb-8">
+        Book a free 1-on-1 counseling session with our experienced consultants today.
+      </p>
+      <a href="book-consultation.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-8 py-3.5 rounded-lg transition shadow-md">
+        Book Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      
+      <!-- Brand Info -->
+      <div class="space-y-4">
+        <a href="index.html" class="logo">
+          <img src="/images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" width="180" height="50" loading="lazy" />
+        </a>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Your trusted guide to higher education abroad. We help students and families navigate the path to world-class universities.
+        </p>
+        <p class="text-slate-500 text-xs">pravas.org</p>
+      </div>
+
+      <!-- Destinations -->
+      <div>
+        <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Destinations</h3>
+        <ul class="space-y-2">
+          <li><a href="destinations.html#usa" class="hover:text-amber-400 transition">USA</a></li>
+          <li><a href="destinations.html#canada" class="hover:text-amber-400 transition">Canada</a></li>
+          <li><a href="destinations.html#australia" class="hover:text-amber-400 transition">Australia</a></li>
+          <li><a href="destinations.html#uk" class="hover:text-amber-400 transition">United Kingdom</a></li>
+          <li><a href="destinations.html#new-zealand" class="hover:text-amber-400 transition">New Zealand</a></li>
+          <li><a href="destinations.html#europe" class="hover:text-amber-400 transition">Europe</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="services.html#career-counseling" class="hover:text-amber-400 transition">Career Counseling</a></li>
+          <li><a href="services.html#university-shortlisting" class="hover:text-amber-400 transition">University Selection</a></li>
+          <li><a href="services.html#test-preparation" class="hover:text-amber-400 transition">Test Preparation</a></li>
+          <li><a href="services.html#application-support" class="hover:text-amber-400 transition">Application Support</a></li>
+          <li><a href="services.html#visa-guidance" class="hover:text-amber-400 transition">Visa Guidance</a></li>
+          <li><a href="services.html#pre-departure-briefing" class="hover:text-amber-400 transition">Pre-Departure Briefing</a></li>
+        </ul>
+      </div>
+
+      <!-- Get In Touch -->
+      <div>
+        <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Get In Touch</h3>
+        <ul class="space-y-2 text-xs">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
+            <span>2-22-275/1/16, 2nd Floor, Sai Satya Commercial Complex, Bhagyanagar Colony, KPHB Main Road, Hyderabad 500072, Telangana, India</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-amber-400"></i>
+            <span>+91 98486 32365 / +91 63017 27882</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-amber-400"></i>
+            <a href="mailto:info@pravas.org" class="hover:text-amber-400">info@pravas.org</a>
+          </li>
+        </ul>
+        <div class="mt-6">
+          <a href="book-consultation.html" class="inline-block bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs hover:bg-amber-400 transition">
+            Book Free Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <p>© 2026 Pravas Consultants. All rights reserved.</p>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-amber-400 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-amber-400 transition">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
