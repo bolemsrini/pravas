@@ -458,15 +458,34 @@
 }
 
 
-/* Force 5 cards in 1 single row on desktop */
+/* Responsive Grid for Our Process */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Enforces 5 equal columns */
-  gap: 16px;                            /* Reduced gap slightly so all 5 fit comfortably */
-  max-width: 1280px;                     /* Widen max container width for 5 columns */
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 16px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
+/* Medium screens (tablets) */
+@media (min-width: 640px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 /* Flashy Card Styling */
 .process-card {
   background: #ffffff;
