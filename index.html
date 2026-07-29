@@ -863,16 +863,27 @@
       </div>
     </div>
   </footer>
-	document.addEventListener('DOMContentLoaded', () => {
-  const toggleBtn = document.getElementById('menuToggle');
-  const navWrapper = document.getElementById('navWrapper');
 
-  if (toggleBtn && navWrapper) {
-    toggleBtn.addEventListener('click', () => {
-      navWrapper.classList.toggle('active');
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+  		const toggleBtn = document.getElementById('menuToggle');
+  		const navWrapper = document.getElementById('navWrapper');
+
+  		if (toggleBtn && navWrapper) {
+    	toggleBtn.addEventListener('click', () => {
+      	navWrapper.classList.toggle('active');
+
+		// Optional: Toggle icon between bars and close X icon
+        const icon = toggleBtn.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-xmark');
+        }
     });
   }
 });
+		</script>
+	
 <!-- PROMOTIONAL POPUP AD MODAL -->
 <div id="adModal" class="ad-modal-overlay">
   <div class="ad-modal-content">
