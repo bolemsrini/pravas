@@ -906,7 +906,7 @@
     </div>
   </footer>
 
-  <!-- Fixed Mobile Menu & Form Script -->
+  <!-- Fixed Mobile Menu & Form Script --><!--
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.getElementById('mobile-nav-toggle');
@@ -978,5 +978,20 @@
     submitBtn.innerText = 'Sending...';
     });
   </script> -->
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('menuToggle');
+      const navWrapper = document.getElementById('navWrapper');
+
+      if (toggleBtn && navWrapper) {
+        toggleBtn.addEventListener('click', () => {
+          navWrapper.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+  
 </body>
 </html>
