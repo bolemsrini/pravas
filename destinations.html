@@ -114,13 +114,64 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
   <!-- Navigation Header -->
+<header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href="index.html" class="logo">
+      <img src="/images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" width="180" height="50" class="h-10 w-auto" fetchpriority="high" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+      <a href="destinations.html" class="text-amber-400 font-semibold border-b-2 border-amber-400 pb-1">Destinations</a>
+      <a href="services.html" class="hover:text-amber-400 transition">Services</a>
+      <a href="about-us.html" class="hover:text-amber-400 transition">About</a>
+      <a href="contact.html" class="hover:text-amber-400 transition">Contact</a>
+    </nav>
+
+    <div class="hidden md:block">
+      <a href="book-consultation.html" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-5 py-2.5 rounded-lg transition shadow-md">
+        Book Free Consultation
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white text-2xl focus:outline-none p-2" aria-label="Toggle Navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-t border-slate-800 px-4 pt-4 pb-6 space-y-3">
+    <a href="index.html" class="block text-slate-300 hover:text-amber-400 py-2 text-base font-medium">Home</a>
+    <a href="destinations.html" class="block text-amber-400 font-semibold py-2 text-base">Destinations</a>
+    <a href="services.html" class="block text-slate-300 hover:text-amber-400 py-2 text-base font-medium">Services</a>
+    <a href="about-us.html" class="block text-slate-300 hover:text-amber-400 py-2 text-base font-medium">About</a>
+    <a href="contact.html" class="block text-slate-300 hover:text-amber-400 py-2 text-base font-medium">Contact</a>
+    <a href="book-consultation.html" class="block bg-amber-500 text-center text-slate-950 font-semibold px-4 py-3 rounded-lg transition mt-4">
+      Book Free Consultation
+    </a>
+  </div>
+</header>
+
+<script>
+  // Simple JavaScript for Mobile Menu Toggle
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+  
+  <!-- Navigation Header
   <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="logo"> <img src="/images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" width="180" height="50" fetchpriority="high" />
       <!-- <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold tracking-tight">
         <span class="text-amber-500"><i class="fa-solid me-1 fa-plane-departure"></i></span>
         <span>Pravas</span>
-      </a> -->
+      </a>
       
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
         <a href="index.html" class="hover:text-amber-400 transition">Home</a>
@@ -135,7 +186,7 @@
         </a>
       </div>
     </div>
-  </header>
+  </header> -->
 
   <!-- Hero Section -->
   <section class="relative bg-slate-900 text-white py-16 lg:py-20 border-b border-slate-800 bg-cover bg-center bg-[linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.85)),url('images/destinations.jpg')]">
