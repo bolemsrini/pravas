@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Free Consultation - Pravas Consultants</title>
+  <meta name="description" content="Schedule a free 1-on-1 counseling session with overseas education experts at Pravas Consultants for study visas, admissions, and university selection.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Pravas Consultants",
+    "url": "https://pravas.org",
+    "logo": "https://pravas.org/images/PCLogo.png",
+    "telephone": "+91-9848632365",
+    "email": "info@pravas.org"
+  }
+  </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col">
+
+  <!-- Navigation Header -->
+  <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="/images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" width="180" height="50" fetchpriority="high" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+        <a href="destinations.html" class="hover:text-amber-400 transition">Destinations</a>
+        <a href="services.html" class="hover:text-amber-400 transition">Services</a>
+        <a href="about-us.html" class="hover:text-amber-400 transition">About</a>
+        <a href="contact.html" class="hover:text-amber-400 transition">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:block">
+        <a href="book-consultation.html" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-5 py-2.5 rounded-lg transition shadow-md">
+          Book Free Consultation
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="menuToggle" class="md:hidden text-2xl text-white focus:outline-none p-2 rounded hover:text-amber-400 transition-colors" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="navWrapper" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-4 py-4 space-y-3 text-center">
+      <a href="index.html" class="block py-2 text-white hover:text-amber-400 rounded transition">Home</a>
+      <a href="destinations.html" class="block py-2 text-white hover:text-amber-400 rounded transition">Destinations</a>
+      <a href="services.html" class="block py-2 text-white hover:text-amber-400 rounded transition">Services</a>
+      <a href="about-us.html" class="block py-2 text-white hover:text-amber-400 rounded transition">About</a>
+      <a href="contact.html" class="block py-2 text-white hover:text-amber-400 rounded transition">Contact</a>
+      <a href="book-consultation.html" class="block py-3 mt-3 bg-amber-500 text-slate-950 font-semibold rounded-lg shadow-md">
+        Book Free Consultation
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat py-16 sm:py-20 px-4 text-white text-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), url('images/reception.jpg');">
+    <div class="max-w-4xl mx-auto space-y-4">
+      <span class="inline-block bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+        Free 1-on-1 Counseling
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+        Book Your Free Overseas Education Consultation
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        Take the first step toward your global education. Schedule a session with our experienced advisors for personalized guidance on universities, courses, visas, and scholarships.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Booking Section -->
+  <main class="flex-grow py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+      <!-- Left Column: Booking Form -->
+      <div class="lg:col-span-8 bg-white p-6 sm:p-10 rounded-xl border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-950">Consultation Registration</h2>
+          <p class="text-sm text-slate-600 mt-1">Please fill in your details below so our education specialists can prepare a tailored roadmap for you.</p>
+        </div>
+
+        <form action="#" method="POST" class="space-y-5">
+          <!-- Student Personal Info -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="fullName" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition" placeholder="e.g. Rahul Sharma">
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Email Address *</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition" placeholder="e.g. rahul@example.com">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="phone" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition" placeholder="+91 98765 43210">
+            </div>
+
+            <div>
+              <label for="qualification" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Highest Qualification *</label>
+              <select id="qualification" name="qualification" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition bg-white">
+                <option value="">Select Qualification</option>
+                <option value="high-school">High School (12th Grade)</option>
+                <option value="bachelors-pursuing">Pursuing Bachelor's Degree</option>
+                <option value="bachelors-completed">Completed Bachelor's Degree</option>
+                <option value="masters">Master's Degree</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Academic & Destination Preferences -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="destination" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Preferred Country *</label>
+              <select id="destination" name="destination" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition bg-white">
+                <option value="">Select Destination</option>
+                <option value="usa">United States (USA)</option>
+                <option value="uk">United Kingdom (UK)</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="new-zealand">New Zealand</option>
+                <option value="europe">Europe</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="degree" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Target Degree / Program *</label>
+              <select id="degree" name="degree" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition bg-white">
+                <option value="">Select Level</option>
+                <option value="bachelors">Undergraduate / Bachelor's</option>
+                <option value="masters">Postgraduate / Master's</option>
+                <option value="phd">Doctorate / PhD</option>
+                <option value="diploma">Diploma / Certificate</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="mode" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Consultation Mode *</label>
+              <select id="mode" name="mode" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition bg-white">
+                <option value="in-person">In-Person (Office Visit in KPHB)</option>
+                <option value="online">Online (Google Meet / Zoom)</option>
+                <option value="phone">Phone Call</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="preferredDate" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Preferred Date</label>
+              <input type="date" id="preferredDate" name="preferredDate" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition bg-white">
+            </div>
+          </div>
+
+          <div>
+            <label for="notes" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Specific Questions / Interests (Optional)</label>
+            <textarea id="notes" name="notes" rows="4" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm outline-none transition resize-y" placeholder="Mention preferred course field, budget constraints, or test score details..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3.5 px-6 rounded-lg transition shadow-md text-base">
+            Confirm & Schedule Consultation
+          </button>
+        </form>
+      </div>
+
+      <!-- Right Column: Sidebar Guidance & Benefits -->
+      <div class="lg:col-span-4 space-y-6">
+
+        <!-- What to Expect Card -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">What You Get in Session</h3>
+          <ul class="space-y-3 text-sm text-slate-600">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-amber-500 text-base mt-0.5"></i>
+              <span>Comprehensive profile assessment by senior education counselors.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-amber-500 text-base mt-0.5"></i>
+              <span>Shortlisted universities based on CGPA, budget, and career goals.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-amber-500 text-base mt-0.5"></i>
+              <span>Scholarship & financial aid planning breakdown.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-amber-500 text-base mt-0.5"></i>
+              <span>Step-by-step guidance for visa processing and mock interviews.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Contact Info Card -->
+        <div class="bg-slate-900 text-white p-6 rounded-xl shadow-md space-y-4">
+          <h3 class="text-lg font-bold text-amber-400 border-b border-slate-800 pb-3">Need Immediate Help?</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Prefer speaking with an advisor right away? Give us a call or stop by our Hyderabad office.
+          </p>
+          <div class="space-y-3 text-sm pt-1">
+            <a href="tel:+919848632365" class="flex items-center gap-3 text-slate-200 hover:text-amber-400 transition">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <span>+91 98486 32365</span>
+            </a>
+            <a href="tel:+916301727882" class="flex items-center gap-3 text-slate-200 hover:text-amber-400 transition">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <span>+91 63017 27882</span>
+            </a>
+            <a href="mailto:info@pravas.org" class="flex items-center gap-3 text-slate-200 hover:text-amber-400 transition">
+              <i class="fa-solid fa-envelope text-amber-400"></i>
+              <span>info@pravas.org</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Mobile Navigation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('menuToggle');
+      const navWrapper = document.getElementById('navWrapper');
+
+      if (toggleBtn && navWrapper) {
+        toggleBtn.addEventListener('click', () => {
+          navWrapper.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
