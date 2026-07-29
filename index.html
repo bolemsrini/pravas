@@ -878,7 +878,11 @@
         icon.classList.toggle('fa-xmark');
     });
 </script>
-
+<script>
+	document.querySelector('.mobile-nav-toggle')?.addEventListener('click', () => {
+  	document.querySelector('.nav-links')?.classList.toggle('active');
+});
+</script>
 <!-- PROMOTIONAL POPUP AD MODAL -->
 <div id="adModal" class="ad-modal-overlay">
   <div class="ad-modal-content">
