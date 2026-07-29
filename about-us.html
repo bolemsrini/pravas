@@ -851,8 +851,9 @@
   </footer>
   
   <!-- Scripts -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
+  <!-- Simplified Mobile Navigation Handler -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.mobile-nav-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -861,30 +862,20 @@
         mobileMenu.classList.toggle('hidden');
       });
     }
-});
-    document.addEventListener('DOMContentLoaded', () => {
-      // Mobile Nav Toggle
-      const navToggle = document.querySelector('.mobile-nav-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
-        });
-      }
 
-      // Testimonials Slider
-      const testimonials = document.querySelectorAll('.testimonial-card');
-      let currentIndex = 0;
+    // Testimonials Slider
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    let currentIndex = 0;
 
-      if (testimonials.length > 0) {
-        setInterval(() => {
-          testimonials[currentIndex].classList.remove('active');
-          currentIndex = (currentIndex + 1) % testimonials.length;
-          testimonials[currentIndex].classList.add('active');
-        }, 3000);
-      }
-    });
-  </script>
+    if (testimonials.length > 0) {
+      setInterval(() => {
+        testimonials[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        testimonials[currentIndex].classList.add('active');
+      }, 3000);
+    }
+  });
+</script>
   <script src="https://unpkg.com/lucide@latest"></script>
 <script>
   lucide.createIcons();
