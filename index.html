@@ -214,55 +214,76 @@
   </section>
 
   <!-- Services Section -->
-    <section class="section" id="services" style="background-color: var(--white); max-width: 100%;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div class="section-header">
-                <span>What We Do</span>
-                <h2>Services Built Around Your Journey</h2>
-				<p>From the first conversation to your first day on campus — we're<br>
-									with you at every step of the way.</p>
-            </div>
-            <div class="cards-grid">
-                <div class="card" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/Counselling.jpg') center/cover no-repeat;">
-                    <div class="card-icon" style="color: #ffffff; font-weight: bold;"><i class="fa-solid fa-user-tie"></i></div>
-                    <h3 style="color: #FF0000; font-weight: bold;">
-  					<a href="services.html#career-counseling" style="text-decoration: none; color: inherit;">Career Counseling</a>
-					</h3>
-                    <p>In-depth profile assessment to align your academic goals with the right career path.</p>
-                </div>
-                <div class="card"  style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/universities.jpg') center/cover no-repeat;">
-                    <div class="card-icon" style="color: #ffffff; font-weight: bold;"><i class="fa-solid fa-building-columns"></i></div>
-                    <h3 style="color: #FF0000; font-weight: bold;">
-					<a href="services.html#university-shortlisting" style="text-decoration: none; color: inherit;">University Shortlisting</a></h3>
-                    <p>Tailored university selections based on budget, rankings, location, and career outcomes.</p>
-                </div>
-                <div class="card"  style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/application.jpg') center/cover no-repeat;">
-                    <div class="card-icon" style="color: #ffffff; font-weight: bold;"><i class="fa-solid fa-clipboard-list"></i></div>
-                    <h3 style="color: #FF0000; font-weight: bold;">
-					<a href="services.html#application-support" style="text-decoration: none; color: inherit;">Application Support</a></h3>
-                    <p>Complete guidance on writing compelling SOPs, LORs, resumes, and error-free applications.</p>
-                </div>
-                <div class="card"  style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/visa.jpg') center/cover no-repeat;">
-                    <div class="card-icon" style="color: #ffffff; font-weight: bold;"><i class="fa-solid fa-passport"></i></div>
-                    <h3 style="color: #FF0000; font-weight: bold;">
-					<a href="services.html#visa-guidance" style="text-decoration: none; color: inherit;">Visa Guidance</a></h3>
-                    <p>Expert assistance with embassy documentation and mock interview preparation.</p>
-                </div>
-				<div class="card"  style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/predeparture.jpg') center/cover no-repeat;">
-                    <div class="card-icon" style="color: #ffffff; font-weight: bold;"><i class="fa-solid fa-building"></i></div>
-					<h3 style="color: #FF0000; font-weight: bold;">
-					<a href="services.html#pre-departure-briefing" style="text-decoration: none; color: inherit;">Pre-Departure Briefing</a></h3>
-					<p>Essential guidance on accommodation, travel arrangements, and cultural orientation.</p>
-				</div>
-				<div class="card"  style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/test.jpg') center/cover no-repeat;">
-					<div class="card-icon" style="color: #ffffff; font-weight: bold;"><i class="fa-solid fa-file-signature"></i></div>
-  					<h3 style="color: #FF0000; font-weight: bold;">
-					<a href="services.html#test-preparation" style="text-decoration: none; color: inherit;">Test Preparation</a></h3>
-					<p>Comprehensive coaching for GRE, GMAT, IELTS, TOEFL, and Duolingo English tests.</p>
-				</div>
-            </div>
+  <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-14">
+        <span class="text-amber-600 font-bold uppercase tracking-wider text-sm">What We Do</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 mt-2">Services Built Around Your Journey</h2>
+        <p class="text-slate-600 mt-2">From the first conversation to your first day on campus — we're with you at every step of the way.</p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Career Counseling -->
+        <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-8 text-white min-h-[280px] flex flex-col justify-end relative bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('images/Counselling.jpg');">
+          <i class="fa-solid fa-user-tie text-amber-400 text-3xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">
+            <a href="services.html#career-counseling" class="hover:text-amber-400 transition">Career Counseling</a>
+          </h3>
+          <p class="text-slate-200 text-sm leading-relaxed">In-depth profile assessment to align your academic goals with the right career path.</p>
         </div>
-    </section>
+
+        <!-- 2. University Shortlisting -->
+        <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-8 text-white min-h-[280px] flex flex-col justify-end relative bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('images/universities.jpg');">
+          <i class="fa-solid fa-building-columns text-amber-400 text-3xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">
+            <a href="services.html#university-shortlisting" class="hover:text-amber-400 transition">University Shortlisting</a>
+          </h3>
+          <p class="text-slate-200 text-sm leading-relaxed">Tailored university selections based on budget, rankings, location, and career outcomes.</p>
+        </div>
+
+        <!-- 3. Application Support -->
+        <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-8 text-white min-h-[280px] flex flex-col justify-end relative bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('images/application.jpg');">
+          <i class="fa-solid fa-clipboard-list text-amber-400 text-3xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">
+            <a href="services.html#application-support" class="hover:text-amber-400 transition">Application Support</a>
+          </h3>
+          <p class="text-slate-200 text-sm leading-relaxed">Complete guidance on writing compelling SOPs, LORs, resumes, and error-free applications.</p>
+        </div>
+
+        <!-- 4. Visa Guidance -->
+        <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-8 text-white min-h-[280px] flex flex-col justify-end relative bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('images/visa.jpg');">
+          <i class="fa-solid fa-passport text-amber-400 text-3xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">
+            <a href="services.html#visa-guidance" class="hover:text-amber-400 transition">Visa Guidance</a>
+          </h3>
+          <p class="text-slate-200 text-sm leading-relaxed">Expert assistance with embassy documentation and mock interview preparation.</p>
+        </div>
+
+        <!-- 5. Pre-Departure Briefing -->
+        <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-8 text-white min-h-[280px] flex flex-col justify-end relative bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('images/predeparture.jpg');">
+          <i class="fa-solid fa-plane-departure text-amber-400 text-3xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">
+            <a href="services.html#pre-departure-briefing" class="hover:text-amber-400 transition">Pre-Departure Briefing</a>
+          </h3>
+          <p class="text-slate-200 text-sm leading-relaxed">Essential guidance on accommodation, travel arrangements, and cultural orientation.</p>
+        </div>
+
+        <!-- 6. Test Preparation -->
+        <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-8 text-white min-h-[280px] flex flex-col justify-end relative bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('images/test.jpg');">
+          <i class="fa-solid fa-file-signature text-amber-400 text-3xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">
+            <a href="services.html#test-preparation" class="hover:text-amber-400 transition">Test Preparation</a>
+          </h3>
+          <p class="text-slate-200 text-sm leading-relaxed">Comprehensive coaching for GRE, GMAT, IELTS, TOEFL, and Duolingo English tests.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
   
   <!-- Services Section Overview --><!--
   <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100">
