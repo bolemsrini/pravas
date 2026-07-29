@@ -454,31 +454,32 @@
         }
 
 
-		/* Container wrapping all 6 service cards */
+		/* Container wrapping all 6 service cards 
 .services-grid {
   display: grid !important;
-  /* Strictly force 3 equal columns */
+  /* Strictly force 3 equal columns 
   grid-template-columns: repeat(3, 1fr) !important; 
-  gap: 20px; /* Uniform spacing between cards */
+  gap: 20px; /* Uniform spacing between cards
   max-width: 1200px;
   margin: 0 auto;
   align-items: stretch; /* Ensures all cards in a row have identical height */
-}
+} */
 
 /* Individual Card Fixes */
-.service-card {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
 
-/* Responsive adjustment for tablet/mobile screens */
+		.service-card {
+  		width: 100%;
+  		box-sizing: border-box;
+  		display: flex;
+  		flex-direction: column;
+		}
+
+/* Responsive adjustment for tablet/mobile screens 
 @media screen and (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on tablets */
   }
-}
+} */
 
 @media screen and (max-width: 600px) {
   .services-grid {
@@ -492,14 +493,14 @@
   	max-width: 1100px;
   	margin: 0 auto;
 		}
-	*/ 
+	
 		
 	.services-grid, 
 	.services-container {
   	display: grid;
-  	grid-template-columns: repeat(3, 1fr); 	/* 3 equal columns */
-  	gap: 20px; 								/* Space between the cards */
-		}
+  	grid-template-columns: repeat(3, 1fr); 	/* 3 equal columns 
+  	gap: 20px; 								Space between the cards 
+		} */
 
 	@media (max-width: 992px) {
   	.services-grid,
