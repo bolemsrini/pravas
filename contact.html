@@ -999,6 +999,17 @@
       }
     });
   </script>
+  <script>
+    // Get today's date formatted as YYYY-MM-DD
+    const now = new Date();
+const year = now.getFullYear();
+const month = String(now.getMonth() + 1).padStart(2, '0');
+const day = String(now.getDate()).padStart(2, '0');
+
+const localToday = `${year}-${month}-${day}`;
+document.getElementById('preferred-date').setAttribute('min', localToday);
+</script>
+
   
 </body>
 </html>
