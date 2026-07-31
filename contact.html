@@ -328,7 +328,7 @@
         </p>
         <p class="text-slate-500 text-xs">pravas.org</p>
 
-            <div class="footer-social">
+  <div class="footer-social">
   <h4>Follow Us</h4>
   <div class="social-icons">
     <!-- Facebook -->
@@ -416,13 +416,9 @@
         </div>
       </div>
 
-
-  
     </div>
 
-    
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
       <p>© 2026 Pravas Consultants. All rights reserved.</p>
       <div class="flex space-x-4">
         <a href="#" class="hover:text-amber-400 transition">Privacy Policy</a>
@@ -430,79 +426,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Fixed Mobile Menu & Form Script --><!--
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const navToggle = document.getElementById('mobile-nav-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (navToggle && mobileMenu) {
-      navToggle.addEventListener('click', () => {
-        // Toggle dropdown menu visibility
-        const isHidden = mobileMenu.classList.toggle('hidden');
-        
-        // Update accessibility attribute
-        navToggle.setAttribute('aria-expanded', !isHidden);
-        
-        // Swap hamburger icon with 'X' icon
-        const icon = navToggle.querySelector('i');
-        if (icon) {
-          icon.classList.toggle('fa-bars');
-          icon.classList.toggle('fa-xmark');
-        }
-      });
-    }
-
-    // Form Loading State
-    const form = document.getElementById('client-info-form');
-    if (form) {
-      form.addEventListener('submit', () => {
-        const submitBtn = form.querySelector('button[type="submit"]');
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.innerText = 'Sending...';
-        }
-      });
-    }
-  });
-</script>
-  
-  <!-- Navigation Toggle Script
-  <script>
-    const navToggle = document.getElementById('mobile-nav-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (navToggle && mobileMenu) {
-      navToggle.addEventListener('click', () => {
-        // Toggle menu visibility
-        const isHidden = mobileMenu.classList.toggle('hidden');
-    
-        // Accessibility & icon toggle
-        navToggle.setAttribute('aria-expanded', !isHidden);
-        const icon = navToggle.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
-      });
-    }
-    const navToggle = document.querySelector('.mobile-nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    navToggle.addEventListener('click', () => {
-      const isActive = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isActive);
-            
-      const icon = navToggle.querySelector('i');
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-xmark');
-    });
-    const form = document.getElementById('client-info-form');
-    form.addEventListener('submit', (e) => {
-    const submitBtn = form.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.innerText = 'Sending...';
-    });
-  </script> -->
 
   <!-- Mobile Menu Script -->
   <script>
