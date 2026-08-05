@@ -4014,3 +4014,111 @@ input, select, textarea {
     max-width: 400px; /* Adjust pixel value as needed (e.g., 300px, 350px) */
     margin: 0 auto;   /* Centers the wrapper inside its column */
 }
+/* Footer Container Layout */
+.site-footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding-top: 60px;
+  font-family: inherit;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr) 2fr;
+  gap: 30px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Links & Text Formatting */
+.footer-links, .contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a, .contact-list a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover, .contact-list a:hover {
+  color: #f59e0b;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+/* Bottom Bar & Return to Top */
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding: 20px 0;
+  background-color: #0b0f19;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.back-to-top-link {
+  color: #f59e0b !important;
+  font-weight: 600;
+  scroll-behavior: smooth;
+}
+
+.back-to-top-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom-container {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
