@@ -36,4 +36,25 @@
       </a>
     </nav>
   </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get current filename (e.g., "destinations.html" or default to "index.html")
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    
+    // Target desktop and mobile navigation links
+    const navLinks = document.querySelectorAll("header nav a");
+
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      
+      if (linkPage === currentPage) {
+        // Highlight active link
+        link.classList.add("text-amber-400", "border-b-2", "border-amber-400", "pb-1", "font-semibold");
+        link.classList.remove("hover:text-amber-400");
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  });
+</script>
 </header>
