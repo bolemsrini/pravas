@@ -86,15 +86,15 @@
   </style>
 </head>
 <body class="font-inter bg-slate-50 text-slate-900">
-
-  <!-- Header / Navigation -->
+{% include header.html %}
+  <!-- Header / Navigation --><!--
   <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center">
         <img src="/images/PCLogo.png" alt="PRAVAS CONSULTANTS Logo" width="180" height="50" fetchpriority="high" />
       </a>
 
-      <!-- Desktop Navigation -->
+      <!-- Desktop Navigation --><!--
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
         <a href="index.html" class="text-amber-400 font-semibold border-b-2 border-amber-400 pb-1">Home</a>
         <a href="destinations.html" class="hover:text-amber-400 transition">Destinations</a>
@@ -103,20 +103,20 @@
         <a href="contact.html" class="hover:text-amber-400 transition">Contact</a>
       </nav>
 
-      <!-- Desktop CTA Button -->
+      <!-- Desktop CTA Button --><!--
       <div class="hidden md:block">
         <a href="book-consultation.html" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-5 py-2.5 rounded-lg transition shadow-md">
           Book Free Consultation
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Menu Button --><!--
       <button id="menuToggle" class="md:hidden text-2xl text-white focus:outline-none p-2 rounded hover:text-amber-400 transition-colors" aria-label="Toggle Navigation">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Navigation Drawer --><!--
     <div id="navWrapper" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-4 py-4 space-y-3 text-center">
       <a href="index.html" class="block py-2 text-amber-400 font-semibold bg-slate-800 rounded">Home</a>
       <a href="destinations.html" class="block py-2 text-white hover:text-amber-400 rounded transition">Destinations</a>
