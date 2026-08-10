@@ -37,6 +37,147 @@
     }
 
 <style>
+
+:root {
+  --primary-color: #0d47a1;
+  --accent-color: #ff9800;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --radius: 12px;
+}
+
+.destinations-section {
+  padding: 4rem 1.5rem;
+  background-color: var(--bg-light);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Grid Layout */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Styling */
+.destination-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-header .subheading {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+/* Meta Details List */
+.meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  background: var(--bg-light);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.meta-list li {
+  font-size: 0.875rem;
+  margin-bottom: 0.35rem;
+}
+
+.meta-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlights */
+.card-highlights h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-highlights ul {
+  padding-left: 1.25rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.925rem;
+}
+
+.card-highlights li {
+  margin-bottom: 0.4rem;
+}
+
+/* Call to Action Button */
+.card-footer {
+  margin-top: auto;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0a3680;
+}
+      
 .highlights-list {
   list-style-type: none;
   padding: 0;
