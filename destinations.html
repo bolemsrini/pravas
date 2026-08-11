@@ -1,0 +1,286 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Additions -->
+  <meta name="description" content="Explore top study destinations worldwide including the US, UK, Canada, Australia, New Zealand, and Europe with Pravas Consultants." />
+  <link rel="canonical" href="https://pravas.org/destinations.html" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Destinations - Pravas Consultants" />
+  <meta property="og:description" content="Find the ideal university, degree, and destination for your higher education abroad." />
+  <meta property="og:image" content="https://pravas.org/images/destinations.avif" />
+  <meta property="og:type" content="website" />
+  
+  <title>Destinations - Pravas Consultants for Higher Education Abroad</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0f172a',
+              blue: '#1e3a8a',
+              gold: '#d97706',
+              light: '#f8fafc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .social-icons a:hover {
+      background-color: #ff9900;
+      color: #000000;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  {% include header.html %}
+
+  <!-- Hero Section -->
+  <section class="relative bg-slate-900 text-white py-16 lg:py-20 border-b border-slate-800 bg-cover bg-center bg-[linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.85)),url('images/destinations.avif')]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-amber-400 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 inline-block mb-4">
+        Study Abroad
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">
+        Choose Your Destination
+      </h1>
+      <p class="text-slate-300 text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+        Whether targeting elite US campuses or leading European institutions — we help you find the right university, degree, and destination for your career.
+      </p>
+
+      <!-- Quick Jump Navigation -->
+      <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+        <a href="#usa" class="bg-amber-600 hover:bg-slate-700 text-slate-200 border border-slate-700 px-4 py-2.5 rounded-lg text-sm font-medium transition flex items-center gap-2">United States</a>
+        <a href="#canada" class="bg-amber-600 hover:bg-slate-700 text-slate-200 border border-slate-700 px-4 py-2.5 rounded-lg text-sm font-medium transition flex items-center gap-2">Canada</a>
+        <a href="#australia" class="bg-amber-600 hover:bg-slate-700 text-slate-200 border border-slate-700 px-4 py-2.5 rounded-lg text-sm font-medium transition flex items-center gap-2">Australia</a>
+        <a href="#uk" class="bg-amber-600 hover:bg-slate-700 text-slate-200 border border-slate-700 px-4 py-2.5 rounded-lg text-sm font-medium transition flex items-center gap-2">United Kingdom</a>
+        <a href="#new-zealand" class="bg-amber-600 hover:bg-slate-700 text-slate-200 border border-slate-700 px-4 py-2.5 rounded-lg text-sm font-medium transition flex items-center gap-2">New Zealand</a>
+        <a href="#europe" class="bg-amber-600 hover:bg-slate-700 text-slate-200 border border-slate-700 px-4 py-2.5 rounded-lg text-sm font-medium transition flex items-center gap-2">Europe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Intro -->
+  <section class="py-10 sm:py-12 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 text-left sm:text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Explore Top Study Destinations Worldwide for Infinite Career Pathways</h2>
+      <p class="text-slate-600 leading-relaxed text-base sm:text-lg">
+        For over 15 years, Pravas has empowered more than 2,000 ambitious students to discover their ideal academic destination across the world’s leading educational hubs—including the US, Canada, Australia, the UK, New Zealand, and Europe. Every study destination provides a distinct blend of top-tier education, rich cultural exposure, and high-growth post-graduation career opportunities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Destinations Container -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+    
+    <!-- 1. United States -->
+    <section id="usa" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden scroll-mt-24">
+      <div class="p-6 sm:p-10">
+        <h2 class="text-3xl font-bold text-slate-900 mb-1">United States</h2>
+        <p class="text-amber-600 font-semibold italic text-lg mb-4">Premier education, global prestige</p>
+        <p class="text-slate-600 leading-relaxed mb-8">
+          Home to iconic Ivy League institutions and top-tier public research universities, the US offers unmatched academic variety. With thousands of accredited colleges, you can easily find a program perfectly aligned with your career ambitions.
+        </p>
+
+        <!-- Quick Info Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Tuition</span>
+            <span class="text-slate-800 font-semibold">$15,000 – $60,000 / year</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Intakes</span>
+            <span class="text-slate-800 font-semibold">Fall (August) &amp; Spring (January)</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Visa Type</span>
+            <span class="text-slate-800 font-semibold">F-1 Student Visa</span>
+          </div>
+        </div>
+
+        <!-- Highlights Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+            <h4 class="font-bold text-slate-900 text-base mb-1">Top-Ranked Global Institutions</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Gain degrees from Ivy League campuses and 200+ top 500 QS-ranked universities.</p>
+          </div>
+          <div class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+            <h4 class="font-bold text-slate-900 text-base mb-1">Extended Post-Study Work Rights</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">STEM graduates qualify for up to 3 years of OPT (Optional Practical Training).</p>
+          </div>
+          <div class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+            <h4 class="font-bold text-slate-900 text-base mb-1">Scholarships &amp; Assistantships</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Access tuition waivers, merit grants, and paid RA/TA roles to offset expenses.</p>
+          </div>
+          <div class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+            <h4 class="font-bold text-slate-900 text-base mb-1">On-Campus Employment</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Work up to 20 hours/week during semesters and full-time during official academic breaks.</p>
+          </div>
+        </div>
+
+        <!-- Popular Programs -->
+        <div class="mb-8">
+          <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-amber-500"></i> Popular Programs
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Computer Science &amp; IT</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Business &amp; MBA</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Engineering</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">AI &amp; Data Science</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Healthcare Management</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Pharmacy / Nursing / Physical Therapy</span>
+          </div>
+        </div>
+
+        <div>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-lg transition">
+            Connect with a US Expert <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Canada -->
+    <section id="canada" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden scroll-mt-24">
+      <div class="p-6 sm:p-10">
+        <h2 class="text-3xl font-bold text-slate-900 mb-1">Canada</h2>
+        <p class="text-amber-600 font-semibold italic text-lg mb-4">Excellence in education, a place to call home</p>
+        <p class="text-slate-600 leading-relaxed mb-8">
+          From world-renowned universities to safe, inclusive communities, Canada provides an exceptional educational experience—backed by post-study work freedom and seamless pathways to permanent residency.
+        </p>
+
+        <!-- Quick Info Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Tuition</span>
+            <span class="text-slate-800 font-semibold">$15,000 – $45,000 / year</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Intakes</span>
+            <span class="text-slate-800 font-semibold">Fall (Sep), Winter (Jan) &amp; Summer (May)</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Visa Type</span>
+            <span class="text-slate-800 font-semibold">Canadian Study Permit</span>
+          </div>
+        </div>
+
+        <!-- Highlights Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+            <h4 class="font-bold text-slate-900 text-base mb-1">Extended Post-Grad Work Rights</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Secure up to a 3-year Post-Graduation Work Permit (PGWP) to gain valuable Canadian work experience.</p>
+          </div>
+          <div class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+            <h4 class="font-bold text-slate-900 text-base mb-1">Direct PR Pathways</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Graduate into streamlined immigration routes, including Express Entry and Provincial Nominee Programs (PNP).</p>
+          </div>
+          <div class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+            <h4 class="font-bold text-slate-900 text-base mb-1">Cost-Effective Excellence</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Enjoy high-quality, internationally recognized degrees at lower tuition costs.</p>
+          </div>
+          <div class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
+            <h4 class="font-bold text-slate-900 text-base mb-1">Safe &amp; Inclusive Society</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Thrive in a welcoming, multicultural environment known for high safety and quality of life.</p>
+          </div>
+        </div>
+
+        <!-- Popular Programs -->
+        <div class="mb-8">
+          <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-amber-500"></i> Popular Programs
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Business Administration</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Information Technology</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Engineering</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Health Sciences</span>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-sm font-medium">Hospitality Management</span>
+          </div>
+        </div>
+
+        <div>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-lg transition">
+            Get connected with a Canada Counsellor <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Australia -->
+    <section id="australia" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden scroll-mt-24">
+      <div class="p-6 sm:p-10">
+        <h2 class="text-3xl font-bold text-slate-900 mb-1">Australia</h2>
+        <p class="text-amber-600 font-semibold italic text-lg mb-4">Leading-edge research, unforgettable living</p>
+        <p class="text-slate-600 leading-relaxed mb-8">
+          At the forefront of global innovation, Australia offers cutting-edge academic programs across its prestigious Group of Eight institutions. Gain high-value qualifications, enjoy an enviable lifestyle, and build a pathway toward long-term global success.
+        </p>
+
+        <!-- Quick Info Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Tuition</span>
+            <span class="text-slate-800 font-semibold">$18,000 – $60,000 / year</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Intakes</span>
+            <span class="text-slate-800 font-semibold">Semester 1 (Feb) &amp; Semester 2 (Jul)</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Visa Type</span>
+            <span class="text-slate-800 font-semibold">Subclass 500 Student Visa</span>
+          </div>
+        </div>
+
+        <div>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-lg transition">
+            Speak with an Australia Specialist <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
