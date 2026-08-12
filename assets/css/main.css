@@ -4155,3 +4155,28 @@ input, select, textarea {
     font-size: 13px;
   }
 }
+@media (max-width: 768px) {
+  /* Stack the main header container vertically */
+  header, nav, .navbar {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 15px 10px !important;
+    gap: 12px !important;
+  }
+
+  /* Wrap links across lines neatly */
+  .nav-links, nav ul, header ul {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px 15px !important;
+    padding: 0 !important;
+  }
+
+  /* Make the button fit small screens */
+  .btn-consultation, header button, header a.btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    text-align: center !important;
+    margin: 5px auto 0 auto !important;
+  }
+}
