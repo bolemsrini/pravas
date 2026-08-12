@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravas Destinations | Study Abroad Portal</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="text-2xl">✈️</span>
+        <span class="font-bold text-xl tracking-tight text-slate-900">Pravas Destinations</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+        <a href="#explore" class="hover:text-indigo-600 transition">Destinations</a>
+        <a href="#compare" class="hover:text-indigo-600 transition">Comparison Table</a>
+        <a href="#guides" class="hover:text-indigo-600 transition">Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <span class="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 border border-indigo-400/30">
+        Study Abroad Portal
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+        Your journey to studying abroad starts here
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+        Explore the world's top study destinations — compare education systems, costs, and post-study career prospects, all in one place.
+      </p>
+      <a href="#explore" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-600/30 transition">
+        Explore destinations
+      </a>
+    </div>
+  </section>
+
+  <!-- Controls Section: Search & Filters -->
+  <section id="explore" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6">
+      <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+        <!-- Search Input -->
+        <div class="relative w-full md:w-96">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input type="text" id="searchInput" oninput="filterDestinations()" placeholder="Search destinations..." class="w-full pl-11 pr-4 py-2.5 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+        </div>
+        <!-- Cost Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+          <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-2">Cost:</span>
+          <button onclick="setFilter('All')" class="filter-btn active px-4 py-1.5 rounded-full text-xs font-medium bg-slate-900 text-white transition">All</button>
+          <button onclick="setFilter('Low')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Low</button>
+          <button onclick="setFilter('Medium')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Medium</button>
+          <button onclick="setFilter('High')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition">High</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destination Cards Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="mb-8">
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-600">Explore Destinations</span>
+      <h2 class="text-3xl font-bold text-slate-900">Choose your study abroad home</h2>
+      <p class="text-slate-500 mt-1">Compare education systems, living costs, and post-study opportunities across top destinations.</p>
+    </div>
+
+    <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Cards rendered dynamically via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Comparison Table Section -->
+  <section id="compare" class="bg-slate-100 py-16 border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600">Side by Side</span>
+        <h2 class="text-3xl font-bold text-slate-900">Compare destinations at a glance</h2>
+        <p class="text-slate-500 mt-1">Tuition, cost of living, language, and post-study work rights — all in one view.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+        <table class="w-full text-left border-collapse min-w-[700px]">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase">
+              <th class="py-4 px-6">Country</th>
+              <th class="py-4 px-6">Avg. Tuition</th>
+              <th class="py-4 px-6">Cost of Living</th>
+              <th class="py-4 px-6">Language</th>
+              <th class="py-4 px-6">Post-Study Visa</th>
+              <th class="py-4 px-6">Work Hours</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody" class="divide-y divide-slate-100 text-sm">
+            <!-- Table rows rendered dynamically via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="guides" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Not sure where to start?</h2>
+    <p class="text-slate-600 max-w-xl mx-auto mb-6">Browse detailed guides for each country to understand the education system, visa process, and career prospects in depth.</p>
+    <button onclick="scrollToCards()" class="px-6 py-3 bg-slate-900 text-white rounded-xl font-medium hover:bg-slate-800 transition">
+      Explore detailed guides
+    </button>
+  </section>
+
+  <!-- Compare Tray (Sticky Bottom) -->
+  <div id="compareTray" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-2xl shadow-2xl flex items-center gap-4 border border-slate-700 transition-all duration-300 transform translate-y-32 opacity-0 z-50">
+    <span id="compareCountText" class="text-sm font-medium">Selected 0 / 3</span>
+    <button onclick="openCompareModal()" class="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-lg transition">
+      Compare Selected
+    </button>
+    <button onclick="clearSelection()" class="text-xs text-slate-400 hover:text-white underline">Clear</button>
+  </div>
+
+  <!-- Compare Modal -->
+  <div id="compareModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl">
+      <button onclick="closeCompareModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-xl font-bold p-2">✕</button>
+      <h3 class="text-2xl font-bold text-slate-900 mb-6">Side-by-Side Comparison</h3>
+      <div id="modalContent" class="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+        <!-- Selected items rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const destinations = [
+      {
+        id: 'ie',
+        flag: '🇮🇪',
+        name: 'Ireland',
+        cost: 'High',
+        tagline: 'European tech hub with English-taught programs and easy post-study stay.',
+        tuition: '$10,000 - $25,000',
+        language: 'English',
+        postStudy: '2 years (Third Level Graduate Scheme)',
+        workHours: '20 hrs/week'
+      },
+      {
+        id: 'us',
+        flag: '🇺🇸',
+        name: 'United States',
+        cost: 'High',
+        tagline: 'World-class universities and limitless career opportunities across diverse landscapes.',
+        tuition: '$25,000 - $55,000',
+        language: 'English',
+        postStudy: 'Up to 12 months (OPT), 36 months for STEM',
+        workHours: '20 hrs/week'
+      },
+      {
+        id: 'uk',
+        flag: '🇬🇧',
+        name: 'United Kingdom',
+        cost: 'High',
+        tagline: 'Centuries of academic excellence with globally recognized qualifications.',
+        tuition: '$15,000 - $40,000',
+        language: 'English',
+        postStudy: '2 years (3 for PhD)',
+        workHours: '20 hrs/week'
+      },
+      {
+        id: 'ca',
+        flag: '🇨🇦',
+        name: 'Canada',
+        cost: 'Medium',
+        tagline: 'Welcoming immigration policies and a clear path to permanent residency.',
+        tuition: '$12,000 - $35,000',
+        language: 'English / French',
+        postStudy: 'Up to 3 years (PGWP)',
+        workHours: '20 hrs/week'
+      },
+      {
+        id: 'au',
+        flag: '🇦🇺',
+        name: 'Australia',
+        cost: 'High',
+        tagline: 'High quality of life with strong post-study work rights and outdoor lifestyle.',
+        tuition: '$20,000 - $45,000',
+        language: 'English',
+        postStudy: '2-4 years (Temporary Graduate visa)',
+        workHours: '20 hrs/week'
+      },
+      {
+        id: 'de',
+        flag: '🇩🇪',
+        name: 'Germany',
+        cost: 'Medium',
+        tagline: 'Low or no tuition fees with world-class engineering and research programs.',
+        tuition: '$0 - $3,000 (public)',
+        language: 'German / English',
+        postStudy: '18 months job search',
+        workHours: '20 hrs/week'
+      }
+    ];
+
+    let selectedDestinations = [];
+    let currentFilter = 'All';
+
+    function renderCards() {
+      const grid = document.getElementById('cardsGrid');
+      const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+      
+      const filtered = destinations.filter(d => {
+        const matchesFilter = currentFilter === 'All' || d.cost === currentFilter;
+        const matchesSearch = d.name.toLowerCase().includes(searchQuery) || d.tagline.toLowerCase().includes(searchQuery);
+        return matchesFilter && matchesSearch;
+      });
+
+      grid.innerHTML = filtered.map(d => {
+        const isSelected = selectedDestinations.includes(d.id);
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <span class="text-3xl">${d.flag}</span>
+                  <h3 class="text-xl font-bold text-slate-900">${d.name}</h3>
+                </div>
+                <button onclick="toggleSelect('${d.id}')" class="w-8 h-8 rounded-full border ${isSelected ? 'bg-indigo-600 border-indigo-600 text-white' : 'border-slate-300 text-transparent'} flex items-center justify-center transition">
+                  <i class="fa-solid fa-check text-xs"></i>
+                </button>
+              </div>
+              <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md mb-3">${d.cost} Cost</span>
+              <p class="text-sm text-slate-600 mb-6 leading-relaxed">${d.tagline}</p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 space-y-2 text-xs text-slate-500">
+              <div class="flex justify-between"><span>Tuition:</span><span class="font-medium text-slate-800">${d.tuition}</span></div>
+              <div class="flex justify-between"><span>Language:</span><span class="font-medium text-slate-800">${d.language}</span></div>
+              <div class="flex justify-between"><span>Post-study:</span><span class="font-medium text-slate-800 truncate max-w-[150px]">${d.postStudy}</span></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = destinations.map(d => `
+        <tr class="hover:bg-slate-50/80 transition">
+          <td class="py-4 px-6 font-semibold text-slate-900 flex items-center gap-2">
+            <span>${d.flag}</span> ${d.name}
+          </td>
+          <td class="py-4 px-6 text-slate-700">${d.tuition}</td>
+          <td class="py-4 px-6"><span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">${d.cost}</span></td>
+          <td class="py-4 px-6 text-slate-700">${d.language}</td>
+          <td class="py-4 px-6 text-slate-700">${d.postStudy}</td>
+          <td class="py-4 px-6 text-slate-700">${d.workHours}</td>
+        </tr>
+      `).join('');
+    }
+
+    function toggleSelect(id) {
+      if (selectedDestinations.includes(id)) {
+        selectedDestinations = selectedDestinations.filter(i => i !== id);
+      } else {
+        if (selectedDestinations.length >= 3) {
+          alert('You can compare up to 3 destinations at a time.');
+          return;
+        }
+        selectedDestinations.push(id);
+      }
+      updateTray();
+      renderCards();
+    }
+
+    function clearSelection() {
+      selectedDestinations = [];
+      updateTray();
+      renderCards();
+    }
+
+    function updateTray() {
+      const tray = document.getElementById('compareTray');
+      const countText = document.getElementById('compareCountText');
+      countText.innerText = `Selected ${selectedDestinations.length} / 3`;
+      
+      if (selectedDestinations.length > 0) {
+        tray.classList.remove('translate-y-32', 'opacity-0');
+      } else {
+        tray.classList.add('translate-y-32', 'opacity-0');
+      }
+    }
+
+    function setFilter(cost) {
+      currentFilter = cost;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.innerText === cost) {
+          btn.className = 'filter-btn active px-4 py-1.5 rounded-full text-xs font-medium bg-slate-900 text-white transition';
+        } else {
+          btn.className = 'filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition';
+        }
+      });
+      renderCards();
+    }
+
+    function filterDestinations() {
+      renderCards();
+    }
+
+    function scrollToCards() {
+      document.getElementById('explore').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openCompareModal() {
+      const modal = document.getElementById('compareModal');
+      const container = document.getElementById('modalContent');
+      const items = destinations.filter(d => selectedDestinations.includes(d.id));
+
+      container.innerHTML = items.map(d => `
+        <div class="pt-4 md:pt-0 md:px-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-3xl">${d.flag}</span>
+            <h4 class="text-xl font-bold text-slate-900">${d.name}</h4>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div><span class="text-xs text-slate-400 uppercase font-semibold">Tuition</span><p class="font-medium text-slate-800">${d.tuition}</p></div>
+            <div><span class="text-xs text-slate-400 uppercase font-semibold">Living Cost</span><p class="font-medium text-slate-800">${d.cost}</p></div>
+            <div><span class="text-xs text-slate-400 uppercase font-semibold">Language</span><p class="font-medium text-slate-800">${d.language}</p></div>
+            <div><span class="text-xs text-slate-400 uppercase font-semibold">Post-Study Visa</span><p class="font-medium text-slate-800">${d.postStudy}</p></div>
+            <div><span class="text-xs text-slate-400 uppercase font-semibold">Work Hours</span><p class="font-medium text-slate-800">${d.workHours}</p></div>
+          </div>
+        </div>
+      `).join('');
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeCompareModal() {
+      document.getElementById('compareModal').classList.add('hidden');
+    }
+
+    // Initialize
+    renderCards();
+    renderTable();
+  </script>
+</body>
+</html>
