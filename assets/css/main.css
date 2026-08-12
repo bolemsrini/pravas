@@ -4122,3 +4122,36 @@ input, select, textarea {
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  /* Prevent header overflow */
+  header, .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    height: auto;
+  }
+
+  /* Hide raw desktop menu links */
+  .nav-links {
+    display: none; /* Toggle this via JavaScript when hamburger menu is clicked */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0d1b2a; /* Header dark background */
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Scale down the CTA button */
+  .btn-consultation {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
