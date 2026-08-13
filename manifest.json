@@ -30,21 +30,21 @@
       "src": "/images/testimonial1.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide",
+      "form_factor": "narrow",
       "label": "Student testimonial 1 of Pravas Consultants"
     },
     {
       "src": "/images/testimonial2.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide",
+      "form_factor": "narrow",
       "label": "Student testimonial 2 of Pravas Consultants"
     },
     {
       "src": "/images/desktop.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide",
+      "form_factor": "narrow",
       "label": "Desktop view of Pravas Consultants"
     }
   ]
