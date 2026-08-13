@@ -3,8 +3,22 @@
   "name": "Pravas Consultants",
   "short_name": "Pravas",
   "description": "Study Abroad & Overseas Education Consultants",
+  "lang": "en",
+  "categories": [
+    "education",
+    "business"
+  ],
+  "iarc_rating_id": "e84b3e5e-f728-4bb8-888f-12d8a57e627f",
   "start_url": "/index.html",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
   "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#0f172a",
@@ -32,7 +46,7 @@
       "src": "/images/testimonial1.png",
       "sizes": "699x1280",
       "type": "image/png",
-      "form_factor": "narrow",
+      "form_factor": "wide",
       "label": "Student testimonial 1 of Pravas Consultants"
     },
     {
