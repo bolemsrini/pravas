@@ -21,28 +21,28 @@
   "screenshots": [
     {
       "src": "/images/home.png",
-      "sizes": "540x720",
+      "sizes": "540x1057",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Homescreen of Pravas Consultants"
     },
     {
       "src": "/images/testimonial1.png",
-      "sizes": "1280x720",
+      "sizes": "699x1280",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Student testimonial 1 of Pravas Consultants"
     },
     {
       "src": "/images/testimonial2.png",
-      "sizes": "1280x720",
+      "sizes": "540x1044",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Student testimonial 2 of Pravas Consultants"
     },
     {
       "src": "/images/desktop.png",
-      "sizes": "1280x720",
+      "sizes": "540x1031",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Desktop view of Pravas Consultants"
