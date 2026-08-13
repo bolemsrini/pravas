@@ -1,9 +1,11 @@
 {
+  "id": "/",
   "name": "Pravas Consultants",
   "short_name": "Pravas",
   "description": "Study Abroad & Overseas Education Consultants",
   "start_url": "/index.html",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#0f172a",
   "icons": [
