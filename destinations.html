@@ -288,7 +288,22 @@
       grid.innerHTML = filtered.map(d => {
         const isSelected = selectedDestinations.includes(d.id);
         return `
-          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition relative flex flex-col justify-between">
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition relative flex flex-col justify-between overflow-hidden">
+
+          <!-- Watermark / Landmark Vector Layer -->
+        <div class="absolute -right-6 -bottom-6 w-32 h-32 opacity-10 pointer-events-none select-none text-slate-900">
+        <!-- Option A: Dynamic SVG or Image path based on destination ID -->
+        <img src="images/landmarks/${d.id}-vector.svg" alt="" class="w-full h-full object-contain" />
+        
+        <!-- Option B: Generic fallback vector icon (e.g., FontAwesome landmark) -->
+        <!-- <i class="fa-solid fa-landmark text-8xl"></i> -->
+        </div>
+
+        <div class="relative z-10">
+        <div class="flex items-center justify-between mb-4">
+          <!-- Card header content -->
+        </div>
+        
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center gap-3">
