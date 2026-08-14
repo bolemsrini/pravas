@@ -110,22 +110,44 @@
   visibility: visible;
 }
 
-/* Popup box dimensions: 30% less than screen (70% width & height) */
+/* Container backdrop */
+.popup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* Ensures a small gap on small mobile screens */
+}
+
+/* Dynamic content box */
 .popup-content {
-  width: 70vw;
-  height: 70vh;
-  background-color: #ffffff;
+  background: #ffffff;
+  padding: 1.5rem;
   border-radius: 12px;
   position: relative;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
+  /* Remove fixed width/height so it sizes according to content */
+  width: auto;
+  height: auto;
+  
+  /* Constrain modal so it never exceeds screen bounds */
+  max-width: min(90vw, 650px);
+  max-height: 85vh;
+  
+  /* Scroll inside if content is taller than viewport */
   overflow-y: auto;
-  box-sizing: border-box;
-  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure image stays contained within the popup box */
+.popup-ad {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 50vh; /* Restricts tall images so text stays visible */
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
 /* Close button */
