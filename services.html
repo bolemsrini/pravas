@@ -365,36 +365,28 @@
     </div>
   </section>
 
-  <!-- Automatic Popup Window -->
-<div id="office-popup-overlay" class="popup-overlay">
+  <div id="popup-modal" class="popup-container fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden">
   <div class="popup-content">
-    <button class="popup-close-btn" id="close-popup">&times;</button>
-    
-    <div class="popup-body">
-      <!-- Logo 
-      <img src="images/PCLogo.png" alt="Pravas Consultants Logo" class="popup-logo" />
-      
-      <!--<h3>Pravas Consultants</h3>-->
-      <img src="images/advt14aug.avif" alt="Pravas Consultants advertisement" class="popup-ad" />
-      <!-- Complete Address 
-      <p class="popup-address">
-        <strong>Office Address:</strong><br>
-        2-22-275/1/16, 2nd Floor, Sai Satya Commercial Complex,<br>
-        Bhagyanagar Colony, KPHB Main Road,<br>
-        Opp Metro Pillar No A758,<br>
-        Hyderabad, Telangana 500072, India
-      </p> -->
-      
-      <!-- Website Link -->
-      <p class="popup-website">
-        <strong>Website:</strong> 
-        <a href="https://pravas.org" target="_blank" rel="noopener">www.pravas.org</a>
-      </p>
+    <!-- Close Button -->
+    <button id="close-popup" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl font-bold p-1 leading-none">
+      &times;
+    </button>
+
+    <!-- Popup Media -->
+    <img src="/images/advt14aug.avif" alt="Pravas Consultants advertisement" class="popup-ad" />
+
+    <!-- Popup Text Content -->
+    <div class="text-center">
+      <h3 class="text-xl font-bold text-slate-900 mb-2">Special Announcement</h3>
+      <p class="text-sm text-slate-600 mb-4">Explore our latest services and consultation offerings tailored for your upcoming journey.</p>
+      <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-4 py-2 rounded-lg transition">
+        Get Started
+      </a>
     </div>
   </div>
 </div>
-
-  {% include footer.html %}
+    
+    {% include footer.html %}
     <!-- Mobile Menu Script --><!--
   <script>
     document.addEventListener('DOMContentLoaded', () => {
