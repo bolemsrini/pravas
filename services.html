@@ -427,29 +427,41 @@
     const closeBtn = document.getElementById('close-popup');
 
     const openModal = () => {
+      // 1. Show overlay backdrop
       modal.classList.remove('opacity-0', 'pointer-events-none');
-      modalContainer.classList.remove('scale-95');
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      
+      // 2. Zoom in content box
+      modalContainer.classList.remove('scale-90', 'opacity-0');
+      modalContainer.classList.add('scale-100', 'opacity-100');
+      
+      // Lock page scroll
+      document.body.style.overflow = 'hidden';
     };
 
     const closeModal = () => {
+      // 1. Zoom out content box
+      modalContainer.classList.remove('scale-100', 'opacity-100');
+      modalContainer.classList.add('scale-90', 'opacity-0');
+      
+      // 2. Hide overlay backdrop
       modal.classList.add('opacity-0', 'pointer-events-none');
-      modalContainer.classList.add('scale-95');
-      document.body.style.overflow = ''; // Restore background scrolling
+      
+      // Restore page scroll
+      document.body.style.overflow = '';
     };
 
-    // Auto-open with slight delay for smooth entry
+    // Auto-open modal after delay
     setTimeout(openModal, 400);
 
-    // Close on Close Button click
+    // Event Listeners
     closeBtn?.addEventListener('click', closeModal);
 
-    // Close when clicking outside the content box
+    // Close on backdrop click
     modal?.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
     });
 
-    // Close on Pressing ESC key
+    // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) {
         closeModal();
