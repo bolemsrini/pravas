@@ -85,6 +85,102 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+  /* Overlay background */
+.popup-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show state */
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup box dimensions: 30% less than screen (70% width & height) */
+.popup-content {
+  width: 70vw;
+  height: 70vh;
+  background-color: #ffffff;
+  border-radius: 12px;
+  position: relative;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Close button */
+.popup-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.popup-close-btn:hover {
+  color: #f5b014;
+}
+
+/* Popup Content Styling */
+.popup-body {
+  max-width: 500px;
+  width: 100%;
+}
+
+.popup-logo {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.popup-body h3 {
+  color: #0b1a30;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.popup-address {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444444;
+  margin-bottom: 15px;
+}
+
+.popup-website {
+  font-size: 1rem;
+  color: #0b1a30;
+}
+
+.popup-website a {
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: bold;
+}
 </head>
 
   <body class="font-inter bg-slate-50 text-slate-900">
@@ -245,6 +341,35 @@
     </div>
   </section>
 
+  <!-- Automatic Popup Window -->
+<div id="office-popup-overlay" class="popup-overlay">
+  <div class="popup-content">
+    <button class="popup-close-btn" id="close-popup">&times;</button>
+    
+    <div class="popup-body">
+      <!-- Logo -->
+      <img src="images/PCLogo.png" alt="Pravas Consultants Logo" class="popup-logo" />
+      
+      <h3>Pravas Consultants</h3>
+      
+      <!-- Complete Address -->
+      <p class="popup-address">
+        <strong>Office Address:</strong><br>
+        2-22-275/1/16, 2nd Floor, Sai Satya Commercial Complex,<br>
+        Bhagyanagar Colony, KPHB Main Road,<br>
+        Opp Metro Pillar No A758,<br>
+        Hyderabad, Telangana 500072, India
+      </p>
+      
+      <!-- Website Link -->
+      <p class="popup-website">
+        <strong>Website:</strong> 
+        <a href="https://pravas.org" target="_blank" rel="noopener">www.pravas.org</a>
+      </p>
+    </div>
+  </div>
+</div>
+
   {% include footer.html %}
     <!-- Mobile Menu Script --><!--
   <script>
@@ -259,6 +384,28 @@
       }
     });
   </script> -->
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const popupOverlay = document.getElementById('office-popup-overlay');
+    const closeBtn = document.getElementById('close-popup');
 
+    // Automatically trigger popup when page loads
+    setTimeout(() => {
+      popupOverlay.classList.add('show');
+    }, 400);
+
+    // Close when clicking the 'X' button
+    closeBtn.addEventListener('click', () => {
+      popupOverlay.classList.remove('show');
+    });
+
+    // Close when clicking outside the popup card
+    popupOverlay.addEventListener('click', (event) => {
+      if (event.target === popupOverlay) {
+        popupOverlay.classList.remove('show');
+      }
+    });
+  });
+</script>
 </body>
 </html>
