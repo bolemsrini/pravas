@@ -387,6 +387,44 @@
 </div>
     
     {% include footer.html %}
+
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('popup-modal');
+    const modalContainer = document.getElementById('popup-container');
+    const closeBtn = document.getElementById('close-popup');
+
+    const openModal = () => {
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modalContainer.classList.remove('scale-95');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    };
+
+    const closeModal = () => {
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modalContainer.classList.add('scale-95');
+      document.body.style.overflow = ''; // Restore background scrolling
+    };
+
+    // Auto-open with slight delay for smooth entry
+    setTimeout(openModal, 400);
+
+    // Close on Close Button click
+    closeBtn?.addEventListener('click', closeModal);
+
+    // Close when clicking outside the content box
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Close on Pressing ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) {
+        closeModal();
+      }
+    });
+  });
+</script>
     <!-- Mobile Menu Script --><!--
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -400,38 +438,5 @@
       }
     });
   </script> -->
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const popupOverlay = document.getElementById('office-popup-overlay');
-    const closeBtn = document.getElementById('close-popup');
-
-    // Automatically trigger popup when page loads
-    setTimeout(() => {
-      popupOverlay.classList.add('show');
-    }, 400);
-
-    // Close when clicking the 'X' button
-    closeBtn.addEventListener('click', () => {
-      popupOverlay.classList.remove('show');
-    });
-
-    // Close when clicking outside the popup card
-    popupOverlay.addEventListener('click', (event) => {
-      if (event.target === popupOverlay) {
-        popupOverlay.classList.remove('show');
-      }
-    });
-  });
-</script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-  const popup = document.getElementById("popup-modal");
-  
-  // Open popup for all screen sizes
-  if (popup) {
-    popup.classList.remove("hidden");
-  }
-});
-    </script>
 </body>
 </html>
