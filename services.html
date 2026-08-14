@@ -394,16 +394,16 @@
   aria-modal="true"
   aria-labelledby="modal-title"
 >
-  <!-- Modal Outer Wrapper (Handles Scrollbar when Modal Exceeds Screen Size) -->
-  <div class="relative w-full max-w-lg max-h-[90vh] overflow-auto flex justify-center items-start rounded-2xl p-2">
+  <!-- Modal Outer Wrapper -->
+  <div class="relative w-full max-w-lg max-h-[90vh] overflow-y-auto flex justify-center items-start rounded-2xl p-2">
 
-    <!-- Modal Content Container (This element transforms/zooms) -->
+    <!-- Modal Content Container -->
     <div 
       id="popup-container"
       class="relative w-full bg-white rounded-2xl p-6 sm:p-8 shadow-2xl transition-transform duration-200 ease-out origin-center"
     >
       <!-- Top Control Bar: Zoom Controls & Close Button -->
-      <div class="absolute top-4 right-4 flex items-center gap-1.5 z-20">
+      <div class="absolute top-4 right-4 flex items-center gap-1.5 z-20 bg-white/90 backdrop-blur-md p-1 rounded-full shadow-sm">
         
         <!-- Zoom Out Button -->
         <button 
@@ -416,7 +416,7 @@
           <i class="fa-solid fa-minus text-xs"></i>
         </button>
 
-        <!-- Reset Zoom Indicator / Button -->
+        <!-- Reset Zoom Button / Label -->
         <button 
           id="zoom-reset" 
           type="button"
@@ -452,17 +452,18 @@
       </div>
 
       <!-- Modal Body Content -->
-      <div class="text-center pt-6 sm:pt-4">
-        <!-- Image Banner -->
-        <div class="overflow-hidden rounded-xl mb-6 mx-auto max-h-56">
+      <div class="text-center pt-8 sm:pt-6">
+        
+        <!-- Image Banner (Displays Full Image) -->
+        <div class="w-full overflow-hidden rounded-xl mb-6 bg-slate-50 flex items-center justify-center">
           <img 
             src="/images/advt14aug.avif" 
             alt="Pravas Consultants Special Announcement" 
-            class="w-full h-full object-contain mx-auto"
+            class="w-full h-auto max-h-[60vh] object-contain rounded-xl shadow-sm"
           />
         </div>
 
-        <!-- Text Content --><!--
+        <!-- Text Content -->
         <h3 id="modal-title" class="text-2xl font-bold text-slate-900 mb-2">
           Special Announcement
         </h3>
@@ -470,18 +471,18 @@
           Explore our latest services and consultation offerings tailored for your upcoming journey.
         </p>
 
-        <!-- CTA Button --><!--
+        <!-- CTA Button -->
         <a 
           href="contact.html" 
           class="inline-block w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-xl shadow-md transition-all active:scale-95"
         >
           Get Started
-        </a> -->
+        </a>
       </div>
 
     </div>
   </div>
-</div>    
+</div>   
     {% include footer.html %}
 
     <script>
