@@ -362,24 +362,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const openModal = () => {
     setZoom(1.0);
+    // Explicitly swap active classes so Tailwind JIT styles apply cleanly
     modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100', 'pointer-events-auto');
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
+    modal.classList.remove('opacity-100', 'pointer-events-auto');
     modal.classList.add('opacity-0', 'pointer-events-none');
     document.body.style.overflow = '';
   };
 
-  // Add ESC key listener to close modal
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) {
-    closeModal();
-  }
-});
-
-  // Open modal automatically after page load
-  setTimeout(openModal, 400);
+  // ESC key listener
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('opacity-100')) {
+      closeModal();
+    }
+  });
 
   // Zoom controls
   zoomInBtn?.addEventListener('click', (e) => {
@@ -402,6 +402,9 @@ document.addEventListener('keydown', (e) => {
   modal?.addEventListener('click', (e) => {
     if (e.target === modal) closeModal();
   });
+
+  // Open popup after brief delay
+  setTimeout(openModal, 500);
 });
 </script>  
   <!-- Mobile Menu Toggle Script -->
