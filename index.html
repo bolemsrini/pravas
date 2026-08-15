@@ -337,88 +337,96 @@
   
   {% include footer.html %}
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('popup-modal');
-  const container = document.getElementById('popup-container');
-  const closeBtn = document.getElementById('close-popup');
-  const zoomInBtn = document.getElementById('zoom-in');
-  const zoomOutBtn = document.getElementById('zoom-out');
-  const zoomResetBtn = document.getElementById('zoom-reset');
-  const zoomLevelText = document.getElementById('zoom-level-text');
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('popup-modal');
+    const container = document.getElementById('popup-container');
+    const closeBtn = document.getElementById('close-popup');
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+    const zoomResetBtn = document.getElementById('zoom-reset');
+    const zoomLevelText = document.getElementById('zoom-level-text');
 
-  if (!modal || !container) return;
-
-  let currentZoom = 1.0;
-  const minZoom = 0.7;
-  const maxZoom = 1.5;
-  const zoomStep = 0.1;
-
-  const setZoom = (newScale) => {
-    currentZoom = Math.min(Math.max(newScale, minZoom), maxZoom);
-    container.style.transform = `scale(${currentZoom})`;
-    if (zoomLevelText) zoomLevelText.textContent = `${Math.round(currentZoom * 100)}%`;
-  };
-
-  const openModal = () => {
-    setZoom(1.0);
-    // Explicitly swap active classes so Tailwind JIT styles apply cleanly
-    modal.classList.remove('opacity-0', 'pointer-events-none');
-    modal.classList.add('opacity-100', 'pointer-events-auto');
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    modal.classList.remove('opacity-100', 'pointer-events-auto');
-    modal.classList.add('opacity-0', 'pointer-events-none');
-    document.body.style.overflow = '';
-  };
-
-  // ESC key listener
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('opacity-100')) {
-      closeModal();
+    // Exit if essential modal elements are not found
+    if (!modal || !container) {
+        console.error("Popup modal or container element not found.");
+        return;
     }
-  });
 
-  // Zoom controls
-  zoomInBtn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    setZoom(currentZoom + zoomStep);
-  });
+    let currentZoom = 1.0;
+    const minZoom = 0.7;
+    const maxZoom = 1.5;
+    const zoomStep = 0.1;
 
-  zoomOutBtn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    setZoom(currentZoom - zoomStep);
-  });
+    // Function to set the zoom level of the modal content
+    const setZoom = (newScale) => {
+        currentZoom = Math.min(Math.max(newScale, minZoom), maxZoom);
+        if (container) {
+            container.style.transform = `scale(${currentZoom})`;
+        }
+        if (zoomLevelText) {
+            zoomLevelText.textContent = `${Math.round(currentZoom * 100)}%`;
+        }
+    };
 
-  zoomResetBtn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    setZoom(1.0);
-  });
+    // Function to open the modal
+    const openModal = () => {
+        setZoom(1.0); // Reset zoom on open
+        // Ensure transitions are applied by removing and adding classes
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        console.log("Modal opened");
+    };
 
-  // Close handlers
-  closeBtn?.addEventListener('click', closeModal);
-  modal?.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
+    // Function to close the modal
+    const closeModal = () => {
+        modal.classList.remove('opacity-100', 'pointer-events-auto');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = ''; // Re-enable background scrolling
+        console.log("Modal closed");
+    };
 
-  // Open popup after brief delay
-  setTimeout(openModal, 500);
-});
-</script>  
-  <!-- Mobile Menu Toggle Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggleBtn = document.getElementById('menuToggle');
-      const navWrapper = document.getElementById('navWrapper');
-
-      if (toggleBtn && navWrapper) {
-        toggleBtn.addEventListener('click', () => {
-          navWrapper.classList.toggle('hidden');
-        });
-      }
+    // Event listener for the ESC key to close the modal
+    document.addEventListener('keydown', (e) => {
+        // Check if modal is visible before closing
+        if (e.key === 'Escape' && modal.classList.contains('opacity-100')) {
+            closeModal();
+        }
     });
+
+    // Event listeners for zoom controls
+    // Using optional chaining to gracefully handle missing buttons
+    zoomInBtn?.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent click from bubbling to modal background
+        setZoom(currentZoom + zoomStep);
+    });
+
+    zoomOutBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setZoom(currentZoom - zoomStep);
+    });
+
+    zoomResetBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setZoom(1.0);
+    });
+
+    // Event listeners for closing the modal
+    closeBtn?.addEventListener('click', closeModal);
+
+    // Close modal when clicking on the backdrop (outside the content)
+    modal?.addEventListener('click', (e) => {
+        // Ensure the click is directly on the modal overlay, not its children
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Open popup after a brief delay for demonstration or effect
+    // If the popup isn't appearing, ensure this script runs *after* the modal HTML is in the DOM.
+    setTimeout(openModal, 500); // [T17](1)
+});
+
   </script>
 <script>
   if ('serviceWorker' in navigator) {
