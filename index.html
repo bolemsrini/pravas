@@ -298,86 +298,39 @@
   </section>
 
 <!-- Popup Modal Overlay -->
-<div 
-  id="popup-modal" 
-  class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="modal-title"
->
+<div id="popup-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <!-- Modal Outer Wrapper -->
   <div class="relative w-full max-w-lg max-h-[90vh] overflow-y-auto flex justify-center items-start rounded-2xl p-2">
-
     <!-- Modal Content Container -->
-    <div 
-      id="popup-container"
-      class="relative w-full bg-white rounded-2xl p-6 sm:p-8 shadow-2xl transition-transform duration-200 ease-out origin-center"
-    >
+    <div id="popup-container" class="relative w-full bg-white rounded-2xl p-6 sm:p-8 shadow-2xl transition-transform duration-200 ease-out origin-center">
+      
       <!-- Top Control Bar: Zoom Controls & Close Button -->
       <div class="absolute top-4 right-4 flex items-center gap-1.5 z-20 bg-white/90 backdrop-blur-md p-1 rounded-full shadow-sm">
-        
-        <!-- Zoom Out Button -->
-        <button 
-          id="zoom-out" 
-          type="button"
-          title="Zoom Out (-)"
-          aria-label="Zoom out"
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
-        >
+        <button id="zoom-out" type="button" title="Zoom Out (-)" aria-label="Zoom out" class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
           <i class="fa-solid fa-minus text-xs"></i>
         </button>
-
-        <!-- Reset Zoom Button / Label -->
-        <button 
-          id="zoom-reset" 
-          type="button"
-          title="Reset Zoom"
-          aria-label="Reset zoom"
-          class="px-2 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-colors"
-        >
+        <button id="zoom-reset" type="button" title="Reset Zoom" aria-label="Reset zoom" class="px-2 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-colors">
           <span id="zoom-level-text">100%</span>
         </button>
-
-        <!-- Zoom In Button -->
-        <button 
-          id="zoom-in" 
-          type="button"
-          title="Zoom In (+)"
-          aria-label="Zoom in"
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
-        >
+        <button id="zoom-in" type="button" title="Zoom In (+)" aria-label="Zoom in" class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
           <i class="fa-solid fa-plus text-xs"></i>
         </button>
-
         <div class="w-px h-5 bg-slate-200 mx-1"></div>
-
-        <!-- Close Button -->
-        <button 
-          id="close-popup" 
-          type="button"
-          aria-label="Close modal"
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-red-600 transition-colors"
-        >
+        <button id="close-popup" type="button" aria-label="Close modal" class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-red-600 transition-colors">
           <i class="fa-solid fa-xmark text-sm"></i>
         </button>
       </div>
 
-      <!-- Modal Body Content -->
+      <!-- Modal Content -->
       <div class="text-center pt-8 sm:pt-6">
-        
-        <!-- Image Banner (Displays Full Image) -->
         <div class="w-full overflow-hidden rounded-xl mb-6 bg-slate-50 flex items-center justify-center">
-          <img 
-            src="images/Independence.avif" 
-            alt="Pravas Consultants Special Announcement" 
-            class="w-full h-auto max-h-[60vh] object-contain rounded-xl shadow-sm"
-          />
+          <img src="images/Independence.avif" alt="Pravas Consultants Special Announcement" class="w-full h-auto max-h-[60vh] object-contain rounded-xl shadow-sm" />
         </div>
       </div>
+
     </div>
   </div>
-</div>
-  
+</div>  
   {% include footer.html %}
 
 <script>
@@ -389,6 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const zoomOutBtn = document.getElementById('zoom-out');
   const zoomResetBtn = document.getElementById('zoom-reset');
   const zoomLevelText = document.getElementById('zoom-level-text');
+
+  if (!modal || !container) return;
 
   let currentZoom = 1.0;
   const minZoom = 0.7;
@@ -412,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   };
 
-  // Auto open modal on load
+  // Open modal automatically after page load
   setTimeout(openModal, 400);
 
   // Zoom controls
@@ -437,8 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === modal) closeModal();
   });
 });
-</script>
-  
+</script>  
   <!-- Mobile Menu Toggle Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
