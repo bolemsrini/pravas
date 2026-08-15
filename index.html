@@ -438,7 +438,82 @@
   </section>
 
   {% include footer.html %}
- 
+
+      <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('popup-modal');
+    const container = document.getElementById('popup-container');
+    const closeBtn = document.getElementById('close-popup');
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+    const zoomResetBtn = document.getElementById('zoom-reset');
+    const zoomLevelText = document.getElementById('zoom-level-text');
+
+    // Zoom Config
+    let currentZoom = 1.0;
+    const minZoom = 0.7; // 70%
+    const maxZoom = 1.5; // 150%
+    const zoomStep = 0.1; // 10% steps
+
+    // Apply Zoom Transformation
+    const setZoom = (newScale) => {
+      // Clamp value within bounds
+      currentZoom = Math.min(Math.max(newScale, minZoom), maxZoom);
+      
+      // Apply transform & update label
+      container.style.transform = `scale(${currentZoom})`;
+      zoomLevelText.textContent = `${Math.round(currentZoom * 100)}%`;
+    };
+
+    // Modal Visibility Functions
+    const openModal = () => {
+      setZoom(1.0); // Reset zoom on open
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = '';
+    };
+
+    // Auto open on load
+    setTimeout(openModal, 400);
+
+    // Zoom Event Handlers
+    zoomInBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setZoom(currentZoom + zoomStep);
+    });
+
+    zoomOutBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setZoom(currentZoom - zoomStep);
+    });
+
+    zoomResetBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setZoom(1.0);
+    });
+
+    closeBtn?.addEventListener('click', closeModal);
+
+    // Backdrop Click Close
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Keyboard Shortcuts (+ / - / Escape)
+    document.addEventListener('keydown', (e) => {
+      if (modal.classList.contains('opacity-0')) return;
+
+      if (e.key === 'Escape') closeModal();
+      if (e.key === '+' || e.key === '=') setZoom(currentZoom + zoomStep);
+      if (e.key === '-' || e.key === '_') setZoom(currentZoom - zoomStep);
+      if (e.key === '0') setZoom(1.0);
+    });
+  });
+</script>
   <!-- Mobile Menu Toggle Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
