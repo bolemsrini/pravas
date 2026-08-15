@@ -330,7 +330,8 @@
 
     </div>
   </div>
-</div>  
+</div>
+  
   {% include footer.html %}
 
 <script>
@@ -366,6 +367,13 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.add('opacity-0', 'pointer-events-none');
     document.body.style.overflow = '';
   };
+
+  // Add ESC key listener to close modal
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) {
+    closeModal();
+  }
+});
 
   // Open modal automatically after page load
   setTimeout(openModal, 400);
